@@ -1,0 +1,87 @@
+{
+  "S0_language": {
+    "active": [],
+    "dropped": [],
+    "normalization": {},
+    "rank": 21
+  },
+  "S1_length": {
+    "active": [
+      "log_source_length"
+    ],
+    "dropped": [],
+    "normalization": {
+      "log_source_length": {
+        "mean": 3.351481440585067,
+        "std": 0.3610618734138547
+      }
+    },
+    "rank": 22
+  },
+  "S2_tokenization": {
+    "active": [
+      "log_source_length",
+      "source_fertility",
+      "source_punctuation_fraction"
+    ],
+    "dropped": [
+      {
+        "feature": "source_unknown_fraction",
+        "reason": "constant in training"
+      }
+    ],
+    "normalization": {
+      "log_source_length": {
+        "mean": 3.351481440585067,
+        "std": 0.3610618734138547
+      },
+      "source_fertility": {
+        "mean": 1.6920633176011215,
+        "std": 0.4479246538845973
+      },
+      "source_punctuation_fraction": {
+        "mean": 0.08565736409932131,
+        "std": 0.05134361850406756
+      }
+    },
+    "rank": 24
+  },
+  "S3_extended": {
+    "active": [
+      "log_source_length",
+      "source_fertility",
+      "source_punctuation_fraction",
+      "source_blank_fraction",
+      "log_target_length"
+    ],
+    "dropped": [
+      {
+        "feature": "source_unknown_fraction",
+        "reason": "constant in training"
+      }
+    ],
+    "normalization": {
+      "log_source_length": {
+        "mean": 3.351481440585067,
+        "std": 0.3610618734138547
+      },
+      "source_fertility": {
+        "mean": 1.6920633176011215,
+        "std": 0.4479246538845973
+      },
+      "source_punctuation_fraction": {
+        "mean": 0.08565736409932131,
+        "std": 0.05134361850406756
+      },
+      "source_blank_fraction": {
+        "mean": 5.1743124695001424e-05,
+        "std": 0.0011191522041641806
+      },
+      "log_target_length": {
+        "mean": 3.3518676254333117,
+        "std": 0.36130681617185456
+      }
+    },
+    "rank": 26
+  }
+}

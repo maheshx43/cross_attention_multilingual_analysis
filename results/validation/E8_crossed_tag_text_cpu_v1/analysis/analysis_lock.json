@@ -1,0 +1,3762 @@
+{
+  "configuration": {
+    "input": "/content/drive/MyDrive/fp32_tag_intervention",
+    "output": "/content/drive/MyDrive/indic_40_enhancements/E8_crossed_tag_text_cpu_v1/analysis",
+    "n_boot": 10000,
+    "seed": 20261122,
+    "source_sha256": "0864d4ced0c458dfa5819e9fd14bb46ff50600c8db84168f21fe149fd3194975",
+    "expected_locks": {
+      "it2": "2f0b207772261183f5e20557435e2277e1f50db6c210a96e2c29fbaaf95b2932",
+      "nllb": "f9386d36b1776b9af1a1edd74b3ce66f846108629b8a73f3d3e034912988bcb3"
+    },
+    "expected_analyses": {
+      "it2": {
+        "baseline_analysis.json": "9d94bb25fae86ac853a2e68db041f1fb2518fb696d317a2e28d2242839085213",
+        "intervention_analysis.json": "1b261a37575c38854749e4e490f523567c49be44c4da64a8812f01c2fa99d5fa"
+      },
+      "nllb": {
+        "baseline_analysis.json": "75ecce233ace98123abe43d468c304ca4d17968709da7607f267816e921af38e",
+        "intervention_analysis.json": "53e3b4ac1846043d14fcd25eb996de8656110027578576cccbc340e664d4140b"
+      }
+    },
+    "expected_baseline_inventory": {
+      "it2": "6da3f7c1b72fac30e76b22931a7cc190f3ac2b3ca48934e93b8547ee7ed32045",
+      "nllb": "9816c7e349ff08a072f7c1ae9c1071e531445e0e0be31cae6492c472c23bc8e0"
+    },
+    "expected_split_identity": "5a224f7c1ccf791fdfca6fce530200b16c28b4bf8fcca26fffa3b6dc9faec61b"
+  },
+  "input_inventory": [
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/frozen_meaning_split.json",
+      "sha256": "9ed17cbd0b4b2edd97e79bf3cd074af5929ee6ea98552ad0965f58afdaef43ef",
+      "bytes": 11132,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/sample_identity.csv",
+      "sha256": "64847ea1866cf6e728315df46e3743f8f69f94614cfde895f53f748ff9d7953c",
+      "bytes": 4765679,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/run_lock.json",
+      "sha256": "01e9a4395194bd183bd4004a0f360bd45adcd5cf2f992aef419554ebcbb54353",
+      "bytes": 809,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/analysis/baseline_analysis.json",
+      "sha256": "23894bad093e7289856462fb6a0de8b81e2227a8f87f19f7b174da2f5fe5d799",
+      "bytes": 3461,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/analysis/intervention_analysis.json",
+      "sha256": "38fa807c1fd5b617a531f5c974e23999fb8c8809deef062bd0250d694985eba7",
+      "bytes": 5845,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/analysis/diagonal_reproduction.json",
+      "sha256": "368f6cfa0565507314fc8addecdbde0c11fc33f13ab5939ee2e0d70ccf14dc07",
+      "bytes": 266,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/asm_Beng__ben_Beng__ben_Beng.csv",
+      "sha256": "4634845e28c39d95e7c8130971d5cfd11747e3e158e2da156ab3571e94335e67",
+      "bytes": 105556,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/asm_Beng__kan_Knda__kan_Knda.csv",
+      "sha256": "81c88e00168ca2259e6787e77135ebd436072a3645d06d16af4dc031965c6b46",
+      "bytes": 105542,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/ben_Beng__asm_Beng__asm_Beng.csv",
+      "sha256": "6ebb30daf35a4991f9b8b2bede5290ec1dcd33c3b2abe319b7847e0deb7576de",
+      "bytes": 105597,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/ben_Beng__kan_Knda__kan_Knda.csv",
+      "sha256": "30b6b14f9dc8d4bdd7d6c54585e339428621be1f4a2fe7ab165252c7bbe74ea7",
+      "bytes": 105677,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/ben_Beng__mar_Deva__mar_Deva.csv",
+      "sha256": "3bbbcdf86d1226466072057efdee555b4b0b806f902cb613cd4363622a23b855",
+      "bytes": 105600,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/ben_Beng__tam_Taml__tam_Taml.csv",
+      "sha256": "c40518929585fde76be7ba987261ca167f77ea88271117dcd5c2f40605506566",
+      "bytes": 105621,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/guj_Gujr__mal_Mlym__mal_Mlym.csv",
+      "sha256": "ce14cd4c07ec11e8137aabfff61ea2738bbbee03039fe9273ac56ce409383c78",
+      "bytes": 105642,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/guj_Gujr__mar_Deva__mar_Deva.csv",
+      "sha256": "f853aa655b03c6cf0f2446c9c0d3980e73d2909a87f36a881bde5d7efdb86756",
+      "bytes": 105691,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/guj_Gujr__pan_Guru__pan_Guru.csv",
+      "sha256": "72a2cb9e92658689eafc36ce542117b3ff4fe5a82f68b3e369b480cfab0411c1",
+      "bytes": 105537,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/hin_Deva__kan_Knda__kan_Knda.csv",
+      "sha256": "0563a0404498980d2c98c9a176195989bfbbf271631ca942be1456fbf3940500",
+      "bytes": 105596,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/hin_Deva__mal_Mlym__mal_Mlym.csv",
+      "sha256": "35e5193ac09a23882035688bd2fce64dc546470d128e3a201f4e754df0fd0bda",
+      "bytes": 105549,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/hin_Deva__ory_Orya__ory_Orya.csv",
+      "sha256": "1a7eaaefeb09bfbcc753d96f664b38d3ac7e1dcc5aa29f91db01880345ecdb93",
+      "bytes": 105549,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/hin_Deva__tam_Taml__tam_Taml.csv",
+      "sha256": "bc1a5e084215749a262e753743f9a740f1d334ddd6c7ff7410c77b2628235301",
+      "bytes": 105613,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/kan_Knda__asm_Beng__asm_Beng.csv",
+      "sha256": "a9ca741ff9a9d3de7b74607f8ee4f87b6e8086d0b245ab49565f3c6489191212",
+      "bytes": 105592,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/kan_Knda__ben_Beng__ben_Beng.csv",
+      "sha256": "3621e04c235045fb9c910afe57a20676593726e0b1480aaad56d5d389a771297",
+      "bytes": 105655,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/kan_Knda__hin_Deva__hin_Deva.csv",
+      "sha256": "6ca052a4d5837fba7ec001e2ecd32317257fb0913610a7d1bb11a1a3ff4c96f2",
+      "bytes": 105612,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/kan_Knda__mal_Mlym__mal_Mlym.csv",
+      "sha256": "b02df5f356eb72d2c8a38d551c0eec3af90d1035ad7db83f981544c560e76650",
+      "bytes": 105562,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/kan_Knda__mar_Deva__mar_Deva.csv",
+      "sha256": "84776eed18969cfee5a7b1823bf043999e0983b90d0a046f6ae9bcf018d9e06a",
+      "bytes": 105686,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/kan_Knda__tam_Taml__tam_Taml.csv",
+      "sha256": "bfc457c1dc99189a070cae1bf517f2e2bbc7dc9b9517bf4333cdc7bb612e5b6c",
+      "bytes": 105623,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/mal_Mlym__guj_Gujr__guj_Gujr.csv",
+      "sha256": "bb9e390740e851548d35f92b580c580904b3bce71a042a3d9ee65a8a2d4f8fcb",
+      "bytes": 105720,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/mal_Mlym__hin_Deva__hin_Deva.csv",
+      "sha256": "7fa15dc5e9f999d6c6a7cd936f1e0c3eea3e890310b06424f69c21249b255645",
+      "bytes": 105599,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/mal_Mlym__kan_Knda__kan_Knda.csv",
+      "sha256": "c2a67cdb13447efea979449c2b232b2fd3c1c87e3d68c0995e36d81034eb6569",
+      "bytes": 105678,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/mal_Mlym__tam_Taml__tam_Taml.csv",
+      "sha256": "7a6de872b1df6d2145bc0c8ac15e16d9380e9e4c51fb4c7e49ff43891210669d",
+      "bytes": 105663,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/mal_Mlym__tel_Telu__tel_Telu.csv",
+      "sha256": "ec7db98f64b79552351d435c8364bc1e0b4974f0a5d772532c98e1a5634c20e7",
+      "bytes": 105634,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/mar_Deva__ben_Beng__ben_Beng.csv",
+      "sha256": "1342491709a2464c2a4d50757da6ca52b6383b95b95989456870f31e881945d8",
+      "bytes": 105621,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/mar_Deva__guj_Gujr__guj_Gujr.csv",
+      "sha256": "64560ef6135751c1a5b30f98dc16b1b60f5414ff87bc248516fea5a3100c119a",
+      "bytes": 105490,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/mar_Deva__kan_Knda__kan_Knda.csv",
+      "sha256": "27752e44123549dd39b4b3d6b39e8acb37d1d6f733bbbb54cf42ecc3d08387aa",
+      "bytes": 105520,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/ory_Orya__hin_Deva__hin_Deva.csv",
+      "sha256": "2bcdf4c178b1fdf44bcdd5a3f1800e2355722dd21cb5c4621afe34a0e3cec981",
+      "bytes": 105496,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/ory_Orya__tel_Telu__tel_Telu.csv",
+      "sha256": "668ba745204726558eac09e21b8bdc8a7ee14cbefa34c7a7ab3547f26727f651",
+      "bytes": 105551,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/pan_Guru__guj_Gujr__guj_Gujr.csv",
+      "sha256": "f75cf9bcfd8954ebc0b5049577a15bc233f45a0abcb49cbaaaedfb02b517ed4a",
+      "bytes": 105593,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/pan_Guru__tam_Taml__tam_Taml.csv",
+      "sha256": "84a06227916ef7155c3e8da7f832cd7a95961cf81524c143380b09c1063fd4d2",
+      "bytes": 105565,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/tam_Taml__ben_Beng__ben_Beng.csv",
+      "sha256": "acd49c2d8d155f060391808ee76a17d2a4d6ae8c64ec2329d6361f763d0207e6",
+      "bytes": 105610,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/tam_Taml__hin_Deva__hin_Deva.csv",
+      "sha256": "8db4da21c070a11e0e69441e3e070400101f72b102ed27e55fc317818e6cb18e",
+      "bytes": 105554,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/tam_Taml__kan_Knda__kan_Knda.csv",
+      "sha256": "c2d1c55f4fc586deecf37da432c1433f92fd128cb275da18ebb84637961753b2",
+      "bytes": 105623,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/tam_Taml__mal_Mlym__mal_Mlym.csv",
+      "sha256": "4cac02d01a1292ad5a9f52dc003632fc59ecde6cfd68df3ce1210dfacdc10400",
+      "bytes": 105667,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/tam_Taml__pan_Guru__pan_Guru.csv",
+      "sha256": "50b8d0cafdd44ce91d21e0f17ecddd1269ccfda80c833a3aae6387fb2cfe45da",
+      "bytes": 105585,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/tam_Taml__tel_Telu__tel_Telu.csv",
+      "sha256": "b76d1fade10dc79e5b0bcfe44618780a9ad4e72850f5582bf0d73353c2ce75bc",
+      "bytes": 105568,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/tel_Telu__mal_Mlym__mal_Mlym.csv",
+      "sha256": "df3b7400b553b79c2a55d71b4dec630eb58e77df66b16bf1467393e62ccca932",
+      "bytes": 105627,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/tel_Telu__ory_Orya__ory_Orya.csv",
+      "sha256": "b658578c14b9382c979b903143f373932ca1efc40599350910bc9cd5588ca73f",
+      "bytes": 105607,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/baseline_tf/tel_Telu__tam_Taml__tam_Taml.csv",
+      "sha256": "e53e5ccbba0ec047d6bb717a2a65982820ae8e8e9c3172270b27da2816687188",
+      "bytes": 105523,
+      "study": "it2",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__pan_Guru__pan_Guru.csv",
+      "sha256": "21b50ab074e3203bf8a52e855438069f74f076ca1aa5cffe47071797b0f0bd6b",
+      "bytes": 70463,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__pan_Guru__mal_Mlym.csv",
+      "sha256": "46617a73acb7aeb5b4c5ad879cb9b8c66d343f852cdfac8f7b4d12593f1aa5eb",
+      "bytes": 70255,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__pan_Guru__tam_Taml.csv",
+      "sha256": "ed9f032a20c06a0295560b332cf3275f2a63be55b09817a4fa1a1cd804fabe91",
+      "bytes": 70235,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__pan_Guru__guj_Gujr.csv",
+      "sha256": "290c80bc0896711a8c38a3d372ac83f6254c58d792821f89be02bf74b03fde81",
+      "bytes": 70308,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__pan_Guru__hin_Deva.csv",
+      "sha256": "0981f0d71b859213a3336f63d2280b3eb649ce028b19719f3c0488c9b54970ea",
+      "bytes": 70412,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__pan_Guru__ben_Beng.csv",
+      "sha256": "f0a383e11c0a041dcafb0dcb71067084c102afb72b9a35f91649df8da426aba8",
+      "bytes": 70253,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__mal_Mlym__pan_Guru.csv",
+      "sha256": "4bab284c04be1e18b0f556b9fe5ece3b58e152921679d34bd504532fc620deb8",
+      "bytes": 70300,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__mal_Mlym__mal_Mlym.csv",
+      "sha256": "bc8343910e8c31c1207aba3e6ff63aee29323c5679157f15e953dfa90d754b3d",
+      "bytes": 70522,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__mal_Mlym__tam_Taml.csv",
+      "sha256": "9c537c0e44e9e77b552a9dedba516565502d53cfabb238665dc4e25272671f0d",
+      "bytes": 70416,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__mal_Mlym__guj_Gujr.csv",
+      "sha256": "4853cbb4325b33a27e1eab505fa5df6b38fc95b2c4c806c0d5351aab303ab897",
+      "bytes": 70355,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__mal_Mlym__hin_Deva.csv",
+      "sha256": "4749c969e3af000004be750f779b7cbad2fe902b4b7f0a8ebd6519b52cab3609",
+      "bytes": 70386,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__mal_Mlym__ben_Beng.csv",
+      "sha256": "294af24b4b33182261eb15ee3c38f63d8364c8054fb39ad4b9d14517dfc70894",
+      "bytes": 70351,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__tam_Taml__pan_Guru.csv",
+      "sha256": "fd1ef1857e5b29c6d1a9594455c17f9c5f1cba3c6433e1a9301cc438b711a231",
+      "bytes": 70263,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__tam_Taml__mal_Mlym.csv",
+      "sha256": "5aae0b478cd2be5b22c541ba038b1ca3b9243af9fae72ccda0255e48aca977aa",
+      "bytes": 70314,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__tam_Taml__tam_Taml.csv",
+      "sha256": "68ee6d1543a0d41c1839043dcc969ad4397f301043672265bc14e752ddc653d8",
+      "bytes": 70441,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__tam_Taml__guj_Gujr.csv",
+      "sha256": "1128d744ca0ddaf658c7ca23eab2633e0176114a811d6aac0fc37fce1bf0969a",
+      "bytes": 70361,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__tam_Taml__hin_Deva.csv",
+      "sha256": "3c860456d4b8ab59d1e4dec9613621194f888b7d67631948df2cef95fe762491",
+      "bytes": 70446,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__tam_Taml__ben_Beng.csv",
+      "sha256": "18038a1c5c32e2c53ab6c5d31d432574d3ec1c0c5114817a72ea15b60c5ac5af",
+      "bytes": 70341,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__guj_Gujr__pan_Guru.csv",
+      "sha256": "43d500bd4e788035412f62e4ea93d1222ec63e3e5eb34c917e8807fb87402e04",
+      "bytes": 70223,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__guj_Gujr__mal_Mlym.csv",
+      "sha256": "ebd12797f243d7a9e8a12fabcdfb7988efa5a7118743c76d01669e7ce253c7de",
+      "bytes": 70256,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__guj_Gujr__tam_Taml.csv",
+      "sha256": "c9c4bb2523c02838e53a78f0654222554e98ace627baed7901a3e4afcea105f2",
+      "bytes": 70339,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__guj_Gujr__guj_Gujr.csv",
+      "sha256": "778e955a244a8beb23d4bbd1faac50016414a08eb5b14e83b4d1bd56584f1353",
+      "bytes": 70467,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__guj_Gujr__hin_Deva.csv",
+      "sha256": "14e8528c217c3213b43cc89e74e34109e850334da60431a5d5a4b6ffc739ff74",
+      "bytes": 70435,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__guj_Gujr__ben_Beng.csv",
+      "sha256": "0420819c60e114c56eff7b80fa30abf037486b8c6d22980de8f405b66c6e9524",
+      "bytes": 70367,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__hin_Deva__pan_Guru.csv",
+      "sha256": "ec48afda3d10bd9a61684f7bde51ff9916489c75242447bcaefabab175bfa915",
+      "bytes": 70299,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__hin_Deva__mal_Mlym.csv",
+      "sha256": "59e6e1881755e06b8ea30865d7cee6be4d30c3d251f2cf9c9d566144e23d903b",
+      "bytes": 70247,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__hin_Deva__tam_Taml.csv",
+      "sha256": "42cdbde8918e3277e0f21b0bb4aa215c634db08956a75b5b0b2138db595a19e4",
+      "bytes": 70294,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__hin_Deva__guj_Gujr.csv",
+      "sha256": "1b28dc8059ebf8854c32a30e1d31cca7a0e766c18da95bd4f68ed30b8bfc80f5",
+      "bytes": 70348,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__hin_Deva__hin_Deva.csv",
+      "sha256": "382bfb1d21a38e7f9be315b6c9098784604d28922896f546aac3b42ae747fb93",
+      "bytes": 70454,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__hin_Deva__ben_Beng.csv",
+      "sha256": "85f0140225fde6359455c13503d6de5b78107e0deaf4dfed7b3ca89b9b911b9e",
+      "bytes": 70371,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__ben_Beng__pan_Guru.csv",
+      "sha256": "fdd3dc618524e70b3cf6466d378725d68e94f185be19d33e2f3f7b11c5cbc5e2",
+      "bytes": 70258,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__ben_Beng__mal_Mlym.csv",
+      "sha256": "0116886f5dd40e6d6d12d698865aec83d5ac083ba67eef48ba98ae2e8001baae",
+      "bytes": 70209,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__ben_Beng__tam_Taml.csv",
+      "sha256": "ac956c15ebbcdcd4d4e5f3dd7610e29410b3fdcda19152abfb5d31d328847e14",
+      "bytes": 70303,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__ben_Beng__guj_Gujr.csv",
+      "sha256": "862a253668bcf3fdca7e8b52ebd699167fc182cb18f348cff2c38e14087917af",
+      "bytes": 70356,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__ben_Beng__hin_Deva.csv",
+      "sha256": "67bf9dd05c1b9b62f29d379c37ec48850745ffbd6dfcb438c6a11c8fd0474f42",
+      "bytes": 70486,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__ben_Beng__ben_Beng.csv",
+      "sha256": "62b2802b1ed4bc883fea0d563e47bf1e1368431e8e6fc5a38636a3b7c1d184ac",
+      "bytes": 70493,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__urd_Arab__pan_Guru.csv",
+      "sha256": "5fa6556d377e3128a32ac62f986e8d9441f24f2cf512b4b182aa980c6dc8f2bf",
+      "bytes": 70250,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__urd_Arab__mal_Mlym.csv",
+      "sha256": "bff43ac9251b5f1648833645a872d2cf5b7c773e785e3506edcdb5fc6240b498",
+      "bytes": 70225,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__urd_Arab__tam_Taml.csv",
+      "sha256": "2c6eabbde9c482f715e996a53803c1f8a43254f3547c38c708240a78a8cd95aa",
+      "bytes": 70251,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__urd_Arab__guj_Gujr.csv",
+      "sha256": "453800f29626ea5e673cb059af70eed90e3c31489ade8caba1a381bba584f04c",
+      "bytes": 70248,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__urd_Arab__hin_Deva.csv",
+      "sha256": "be2d621a9f25dd6625d9f6af877b7c7f83b9f791be5b78430f7db4b594da3678",
+      "bytes": 70333,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/kan_Knda__urd_Arab__ben_Beng.csv",
+      "sha256": "6185127f05d67fe1acede3dd198a7334a0b4137b12b1faf79059417bb7ed2b3d",
+      "bytes": 70379,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__pan_Guru__pan_Guru.csv",
+      "sha256": "9725ba6b326d57059632a592e51c2dea192eaa42b1a5a8edbefff62bc41586cb",
+      "bytes": 70490,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__pan_Guru__mal_Mlym.csv",
+      "sha256": "221d145961f85e9bd03af50143956372049c11dc2d833a61a599f9135e643201",
+      "bytes": 70242,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__pan_Guru__tam_Taml.csv",
+      "sha256": "633dc65e7147dd4d8e51ef9f84482ebecaa20af8b8547feed1d35aeb43ebee76",
+      "bytes": 70350,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__pan_Guru__guj_Gujr.csv",
+      "sha256": "7bfddfaabd7e359dce17cf73d4dc8b440acf21c181f4097a745f006519bd8ec4",
+      "bytes": 70334,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__pan_Guru__hin_Deva.csv",
+      "sha256": "987275264f77e80d83620743886bba1b04783a3628564cff4e0e6196dcf8d35f",
+      "bytes": 70470,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__pan_Guru__ben_Beng.csv",
+      "sha256": "f05bbeb9e01c565e71ede434a4c1ac9f1fcd7fcd4f2ad36deaa0ebbfa766d0dc",
+      "bytes": 70280,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__mal_Mlym__pan_Guru.csv",
+      "sha256": "b4bbb8ee77513316a93bbd1e174804cc7b41a8760bbadd16233da295a4338757",
+      "bytes": 70297,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__mal_Mlym__mal_Mlym.csv",
+      "sha256": "e6bade044be02c24ed496625f777e2a0fb940e3189ce2217c391b300229cc60a",
+      "bytes": 70521,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__mal_Mlym__tam_Taml.csv",
+      "sha256": "a99492592ad82b47faa10b129781fe543eafca9f076111c8ebdf09c3432ced38",
+      "bytes": 70382,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__mal_Mlym__guj_Gujr.csv",
+      "sha256": "fe297a92aeaae415f2fb87c82c4f570547b2029bac38546c76292b5bce714864",
+      "bytes": 70347,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__mal_Mlym__hin_Deva.csv",
+      "sha256": "06029aed664e62c1286471d229b2ee554a2220bae1db68c49ac45ec2ed1bbd7e",
+      "bytes": 70406,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__mal_Mlym__ben_Beng.csv",
+      "sha256": "aeef39fa470d642fd4c6f9f64032e4d4d4dddf5200506f58815af42e2a10458b",
+      "bytes": 70429,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__tam_Taml__pan_Guru.csv",
+      "sha256": "58f99f36ce2f600c11dd01deb013a1a8d5b1c3b68fc205baa46aa1c7c3324ca4",
+      "bytes": 70289,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__tam_Taml__mal_Mlym.csv",
+      "sha256": "a484ba95874017859c1189aa86be07d124fef49b1e802c921d5fd92be9d4b65c",
+      "bytes": 70380,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__tam_Taml__tam_Taml.csv",
+      "sha256": "1382287efe1497102439cfd889d44603687f7e64043e4b26c39f85704bef5217",
+      "bytes": 70487,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__tam_Taml__guj_Gujr.csv",
+      "sha256": "c2f374058cc33a6dab10652576ac8643f2c593cb1ab3e3e3f88b8ce1338c4c4f",
+      "bytes": 70281,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__tam_Taml__hin_Deva.csv",
+      "sha256": "7036700e789c32672b2ca5e0d2dc4a8bbcd3e285417ae1799d964b61c2332d9b",
+      "bytes": 70453,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__tam_Taml__ben_Beng.csv",
+      "sha256": "07ae456ac281d4774a991baba7ef75fe7d4b6cfe35e0cc3b73900dd295cee6eb",
+      "bytes": 70369,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__guj_Gujr__pan_Guru.csv",
+      "sha256": "526c684b24b4e8e424a49a2d1eb285a9ded989cade8ef8c389c88d61810d98f0",
+      "bytes": 70337,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__guj_Gujr__mal_Mlym.csv",
+      "sha256": "af69345f3bcb6972575526b11c08075c7c3eb64cb3a66f1518acd36d8f809200",
+      "bytes": 70314,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__guj_Gujr__tam_Taml.csv",
+      "sha256": "34efe231acae948da25b3b08557d834d491fb76613f58281837d25b8b2549c11",
+      "bytes": 70314,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__guj_Gujr__guj_Gujr.csv",
+      "sha256": "033df8b351e82792935c18d1c5efe7095db00ab5a113a372b7a40f8994f54416",
+      "bytes": 70483,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__guj_Gujr__hin_Deva.csv",
+      "sha256": "e85d89431547a976563c32090b913add3a85ae64ae11498405a4654fd58e7716",
+      "bytes": 70424,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__guj_Gujr__ben_Beng.csv",
+      "sha256": "bb25bd0e42b641256be96d4fe4f4f54e6314572d5bef534200f9d3de793a0ab3",
+      "bytes": 70409,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__hin_Deva__pan_Guru.csv",
+      "sha256": "e9af5b9e8fe6aaf7c0ca421c7772a7e73f0df67aeaa6b6a9003d9526bf6e14ea",
+      "bytes": 70324,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__hin_Deva__mal_Mlym.csv",
+      "sha256": "16de2ad8107f42f0b4750f67194d212faf35f8c9988be84156c07e781c1787d2",
+      "bytes": 70181,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__hin_Deva__tam_Taml.csv",
+      "sha256": "b5e54ced6b023657c730c3159defa2441e3a2532cb9c9e708fb26c8896025ac4",
+      "bytes": 70324,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__hin_Deva__guj_Gujr.csv",
+      "sha256": "d529d6f1a7498f67a36d314bff9ba2a18dfd5c3d807e32197d5972b41b599342",
+      "bytes": 70406,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__hin_Deva__hin_Deva.csv",
+      "sha256": "dea0a737c1684b7e0da3d33f7218be652b8add5ae14802f963ee7d1de7a37c8c",
+      "bytes": 70567,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__hin_Deva__ben_Beng.csv",
+      "sha256": "797dc56a937b2aaf70c2507ce5881ad118cf15cf310c1bd90c96429cacb36816",
+      "bytes": 70412,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__ben_Beng__pan_Guru.csv",
+      "sha256": "d689ee49911536c6964c8c3d8e144f2c2727a3049862ae7a9e79510b66eb43de",
+      "bytes": 70232,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__ben_Beng__mal_Mlym.csv",
+      "sha256": "4ada47a87b243c44ad5964ae46560a448ed2813dd8c46d28154fdc3e49a75b06",
+      "bytes": 70192,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__ben_Beng__tam_Taml.csv",
+      "sha256": "25b7e1ba5b1ad6de575dfa8cb4def323559f6ea9465454450433d7bec41ab56e",
+      "bytes": 70310,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__ben_Beng__guj_Gujr.csv",
+      "sha256": "73997a44e5eceb2421855d4d202c93bcebec9e790664531fa7ecbabb0ce09358",
+      "bytes": 70333,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__ben_Beng__hin_Deva.csv",
+      "sha256": "a4cd4f3646f73c0dcdec7fe20ea2b43b6c1d2c46f20b7e57b228d2ea849cdd94",
+      "bytes": 70426,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__ben_Beng__ben_Beng.csv",
+      "sha256": "5a81332c0928c0f3957e668efff50e3b0df33674a5462726847fa6b54a37a794",
+      "bytes": 70535,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__urd_Arab__pan_Guru.csv",
+      "sha256": "3804facee4d06ca1be90915875c593f94b236b92217f6035f76dae2b1472dc83",
+      "bytes": 70239,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__urd_Arab__mal_Mlym.csv",
+      "sha256": "90c5d9b5a2f23cb86c6dc36f2bc3bf0ef338f8fd5a6c88834993eb01d9b10b0c",
+      "bytes": 70236,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__urd_Arab__tam_Taml.csv",
+      "sha256": "7a313fa04621efbf1ef2e9360754bbe5e4da32ed256dc395425222aed6d2ad83",
+      "bytes": 70244,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__urd_Arab__guj_Gujr.csv",
+      "sha256": "e26d9a9fd5f2ae54f03f3952e56672e9254263325c2fcc6431bd516af3d59b85",
+      "bytes": 70306,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__urd_Arab__hin_Deva.csv",
+      "sha256": "52037a28ad1c7ad01afd194e063cd89559d280b5a13d99b3a83e54b9b3a707d3",
+      "bytes": 70336,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/tel_Telu__urd_Arab__ben_Beng.csv",
+      "sha256": "f4b9da46ca24b76d4f0da3872fcf90fe34ec415e0afa3c16de5803b19dc1f23e",
+      "bytes": 70355,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__pan_Guru__pan_Guru.csv",
+      "sha256": "d12bd2d157e4c1fd4d9f9278f7c5e32dcaaef5e2e81bb326e9639670922f5486",
+      "bytes": 70422,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__pan_Guru__mal_Mlym.csv",
+      "sha256": "865c565cc48215f379390b2ca05e8cdfcd584e360dc87cf188d6dacad9890821",
+      "bytes": 70182,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__pan_Guru__tam_Taml.csv",
+      "sha256": "f65e1cf5565fc740c9336a36544e96e1ec1f1617f05f1a4ecb11701004770eab",
+      "bytes": 70263,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__pan_Guru__guj_Gujr.csv",
+      "sha256": "d9d64fbb7b4e41aa2765e6500f8348bf7f77aec19c6615a575d2ebc54e997317",
+      "bytes": 70336,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__pan_Guru__hin_Deva.csv",
+      "sha256": "5d18c95174530a13af2888f581b0bcf17c871aba4e244201ce3bdc5ad600f179",
+      "bytes": 70410,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__pan_Guru__ben_Beng.csv",
+      "sha256": "e40aba5fabeaf1b7c4bf25be955b02d2da19ca62573041965a72c1d79bc602da",
+      "bytes": 70274,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__mal_Mlym__pan_Guru.csv",
+      "sha256": "8e79c5a8bcba2a572021b5769144eba9e04ff9d6e10a38a5853f15b9ca86d733",
+      "bytes": 70274,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__mal_Mlym__mal_Mlym.csv",
+      "sha256": "42e9009dde97ce3d403751c9cbc1037b94daed3543b69b1e88bae5b026a6fbdf",
+      "bytes": 70503,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__mal_Mlym__tam_Taml.csv",
+      "sha256": "9607cbc2ca9608721bba5e493abf122e224b3b118824a081de28cb2b5254dfdb",
+      "bytes": 70310,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__mal_Mlym__guj_Gujr.csv",
+      "sha256": "7d5e17a51d1e3f046777282e691874d65541be8aa628a47a8c0cdab6cd2dbd38",
+      "bytes": 70359,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__mal_Mlym__hin_Deva.csv",
+      "sha256": "55c5404c5cf5c9f6583397f4e2bcb153fefb92e59ed14317cdf5bdd977a3b72d",
+      "bytes": 70419,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__mal_Mlym__ben_Beng.csv",
+      "sha256": "bb4fdd745e749119f550ae3f275f367a41353878d95c1c6166ec9bdbd10c30bd",
+      "bytes": 70340,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__tam_Taml__pan_Guru.csv",
+      "sha256": "37fc9d7538499b776df324ecd730e960b078b85f46b8e663dcb6d246183aed36",
+      "bytes": 70291,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__tam_Taml__mal_Mlym.csv",
+      "sha256": "32c703ae66e2624d74a4a66fb8ecd19d5e348136b368090077e33e6b663ca8e7",
+      "bytes": 70309,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__tam_Taml__tam_Taml.csv",
+      "sha256": "8649b68c205bf5274ff11b0baf011e390ae6c3e7cdd58c1ac6eb8efaeac2f03d",
+      "bytes": 70519,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__tam_Taml__guj_Gujr.csv",
+      "sha256": "7181017c83a97614c0f6e52b5c6791a6443a2de3c6e1f75ae984082c4e1d2b71",
+      "bytes": 70294,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__tam_Taml__hin_Deva.csv",
+      "sha256": "920cef64ba774527ecd21613029733a3c8accca7d36f304cfa898ef887fbb832",
+      "bytes": 70418,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__tam_Taml__ben_Beng.csv",
+      "sha256": "4ed1d150df3785cdde05e0342f0472eb4e9d964ced8bd2ce97020fd27fc7f514",
+      "bytes": 70290,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__guj_Gujr__pan_Guru.csv",
+      "sha256": "1ad7e36909ba5e26becee1994e0d101e2c4c0fe4dea2aa4de138eff92ccf0bb2",
+      "bytes": 70260,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__guj_Gujr__mal_Mlym.csv",
+      "sha256": "2ba1d4d52598447254bbd85eb27fd6f51f63d683010642b0bf8c5d996c58c24f",
+      "bytes": 70233,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__guj_Gujr__tam_Taml.csv",
+      "sha256": "76592d2bd681e55914d72bb3a6090e97385cb5cd1dc8c6283a1ab0c225c24f36",
+      "bytes": 70304,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__guj_Gujr__guj_Gujr.csv",
+      "sha256": "13613afbb8093c776622d189e7cca02bd883974022d1d3422a486d3de3fa9986",
+      "bytes": 70539,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__guj_Gujr__hin_Deva.csv",
+      "sha256": "80652d8aaf8596e9feb1f5569e241f69ebcfe947fbb7be9964f97ef041a4bab2",
+      "bytes": 70437,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__guj_Gujr__ben_Beng.csv",
+      "sha256": "05a6d121b8110b6a2aa52d4836e05fabb624b30115dd9593e798ef849008faea",
+      "bytes": 70316,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__hin_Deva__pan_Guru.csv",
+      "sha256": "60212ca92d0ef735be23dbfe95268026e62b7238093f1bdeb2c90b72e4bc8e92",
+      "bytes": 70286,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__hin_Deva__mal_Mlym.csv",
+      "sha256": "c768a7b5bbf694ee0380d5c3d7418b831d56a02ce12e52eb1797000fb5cede4d",
+      "bytes": 70115,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__hin_Deva__tam_Taml.csv",
+      "sha256": "78679980091861a3ab25de4078f34d57b9947c0c58d460c798c90b92df53298a",
+      "bytes": 70274,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__hin_Deva__guj_Gujr.csv",
+      "sha256": "20789e47d2158806683276925601d8d09cb96a9b75f62f443836fc814b93ab59",
+      "bytes": 70358,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__hin_Deva__hin_Deva.csv",
+      "sha256": "094c58bde0b857faee6b24c39c650ccae31fea0e31cd01fa1db456c18c3147d1",
+      "bytes": 70447,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__hin_Deva__ben_Beng.csv",
+      "sha256": "f0b9632c8755ea5662f111e6fe898f2b6b9468503148a3f46774f9a946cce63c",
+      "bytes": 70353,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__ben_Beng__pan_Guru.csv",
+      "sha256": "d728508c703b060a061bb7f2ecf0bd32b5b43e4564335b9f5ac2d783f3a023d3",
+      "bytes": 70202,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__ben_Beng__mal_Mlym.csv",
+      "sha256": "19a2c3844a870b9dba3cc85777a263031fbe7382e4170b214edd3438f699c672",
+      "bytes": 70234,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__ben_Beng__tam_Taml.csv",
+      "sha256": "86c31efa0fdbf052fea15f882f169a2bf5b675afe8ba49dca16a78b273d63736",
+      "bytes": 70222,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__ben_Beng__guj_Gujr.csv",
+      "sha256": "51f087f801594bf4a4405b8da2a619a031bdb20919b57e8a59054221ea765b8e",
+      "bytes": 70295,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__ben_Beng__hin_Deva.csv",
+      "sha256": "8e203cae0704f9a5d79d0a294d679a2c7d67bfdb4801d407e878dd3e12dd979c",
+      "bytes": 70407,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__ben_Beng__ben_Beng.csv",
+      "sha256": "a53298e7fd38e52869a6476f733be47e0050225648b799ab912b49687e079f81",
+      "bytes": 70523,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__urd_Arab__pan_Guru.csv",
+      "sha256": "ed511fc5f7c24ecccf5ad13f36b8f9594491b57de7736f21aabac26001c4073f",
+      "bytes": 70229,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__urd_Arab__mal_Mlym.csv",
+      "sha256": "2f4c5d5ad66e0bbc173d41e38e0dd1a3eab0e3f3500bf3ef909e8b4af481878d",
+      "bytes": 70224,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__urd_Arab__tam_Taml.csv",
+      "sha256": "57b1a7093a70b3fc7a6380c82568f1398f1bb3696d0bc68f6d5c4fc41f22d49c",
+      "bytes": 70271,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__urd_Arab__guj_Gujr.csv",
+      "sha256": "e0acdcf9a00bf07f5bc4dde5babf7e3d9e7120edc55939d0015f7969a9077f54",
+      "bytes": 70293,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__urd_Arab__hin_Deva.csv",
+      "sha256": "41eb7c9daa2b18abc756a8fe44e4b48fbb499126e0263ab754fc9bcc45a9556e",
+      "bytes": 70295,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/ory_Orya__urd_Arab__ben_Beng.csv",
+      "sha256": "50c795442f9b9f3ed35b260f7d4211916b6f299452cd17a8af75bd6cdd7442fc",
+      "bytes": 70321,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__pan_Guru__pan_Guru.csv",
+      "sha256": "0fe3af1c00e8ad61ddf102732e7eabdf3e0a8dad4a1059dc747a929def299fdd",
+      "bytes": 70529,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__pan_Guru__mal_Mlym.csv",
+      "sha256": "4ae50ef21a0feba43caa1be79168e5ac6d9b1b686ed2e9d684f15d1545966600",
+      "bytes": 70233,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__pan_Guru__tam_Taml.csv",
+      "sha256": "1df8b02b675fdd95d17751da32208355ff9cb821472dc93e88d970f6e8bcb312",
+      "bytes": 70348,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__pan_Guru__guj_Gujr.csv",
+      "sha256": "fee8a18609f96c2f6878f03c54a1882360a775f595eec7a67267723640a7b5e0",
+      "bytes": 70316,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__pan_Guru__hin_Deva.csv",
+      "sha256": "93f63f4f841324039b8b642e7dc3a772b50aadfd5d2eca9b3b38becee5d2c9d5",
+      "bytes": 70425,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__pan_Guru__ben_Beng.csv",
+      "sha256": "97ee3e99590f4516f57cf4966978752c946aa870b621f943deb0fd8ec3fe1288",
+      "bytes": 70361,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__mal_Mlym__pan_Guru.csv",
+      "sha256": "7ac319bc7766c7dfac96bcc2ebc8c7f21dae9b2e23731982f9792bd25c8132d3",
+      "bytes": 70236,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__mal_Mlym__mal_Mlym.csv",
+      "sha256": "9cd0bc884022052454324527c44a0785b102759cc7cbcccbd655d58ce8130ca1",
+      "bytes": 70497,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__mal_Mlym__tam_Taml.csv",
+      "sha256": "b92c48dc8a6472c44561119bd3a5b3978281673b272dd531c3e5b64097312da9",
+      "bytes": 70378,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__mal_Mlym__guj_Gujr.csv",
+      "sha256": "78d16788a7c46369a6e2eb4488c5f9ab229472a4bbec06a61737583622d9056b",
+      "bytes": 70383,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__mal_Mlym__hin_Deva.csv",
+      "sha256": "c040e039dc22981636b22c9bdabc37120801d0e2a66c77e53f10a723780f22d6",
+      "bytes": 70481,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__mal_Mlym__ben_Beng.csv",
+      "sha256": "b9271d3b45deae6c9c376d901b20ae0973b3e727c87e825715db1f0a387ea24d",
+      "bytes": 70341,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__tam_Taml__pan_Guru.csv",
+      "sha256": "343bf14cf664d2f96fc57a8428b9408d1ab91c43847c632741cf9c956f200d88",
+      "bytes": 70238,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__tam_Taml__mal_Mlym.csv",
+      "sha256": "6c7b7938300ccfacb6f726aa8cfbb2ae4730f877543a8c4685e7ae520d31be6f",
+      "bytes": 70336,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__tam_Taml__tam_Taml.csv",
+      "sha256": "147c53196502b8967cbf691f84ad8daf940b13cb1b7f230bdbc3acc99a1cfb38",
+      "bytes": 70550,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__tam_Taml__guj_Gujr.csv",
+      "sha256": "88a391575bd86b761778133a6493446bc6fd0e3737999e3a400674c71b68c265",
+      "bytes": 70320,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__tam_Taml__hin_Deva.csv",
+      "sha256": "83a8629854ca7d10b1c27f58a49f69cc59cf3e8b8c0a508e7ae5e91a6ea673fc",
+      "bytes": 70468,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__tam_Taml__ben_Beng.csv",
+      "sha256": "656a221ad98d97d1c932acaa9694eb30bec1874f30f15f921987db98f0db7f8d",
+      "bytes": 70306,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__guj_Gujr__pan_Guru.csv",
+      "sha256": "29807723d5d383749f5f82f93331969835411d235c6feca8659e830eb9a0fa99",
+      "bytes": 70347,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__guj_Gujr__mal_Mlym.csv",
+      "sha256": "3207a4ec421ee0b0505b68126c04b00b2927e6e45d62c900c8a79a32c66a80f7",
+      "bytes": 70241,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__guj_Gujr__tam_Taml.csv",
+      "sha256": "eb6964c4f7e0703ebbf62ba8c11618db2d387075781de81c48133595f585bb8d",
+      "bytes": 70281,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__guj_Gujr__guj_Gujr.csv",
+      "sha256": "8d198c386d7181a775f28b473038f26319dbb939fb440f16b11641d3027ea707",
+      "bytes": 70451,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__guj_Gujr__hin_Deva.csv",
+      "sha256": "028e4a683d14ba2eb7a0e8d613810bb86e1742ab9debd0ffb5ef37b3d02b0317",
+      "bytes": 70447,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__guj_Gujr__ben_Beng.csv",
+      "sha256": "5d189cabe235a79761d0217c1a29b6b9f37c6b946ddc4b841da429aae1b47820",
+      "bytes": 70368,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__hin_Deva__pan_Guru.csv",
+      "sha256": "2238c6916c4f5c68f571defc720a6b5d15ac73559d7133298e2abcd68a5dec85",
+      "bytes": 70272,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__hin_Deva__mal_Mlym.csv",
+      "sha256": "173fd309e22aca82af628409ae1c7129d63d4fdbd1f8187ac3de6c4e26307966",
+      "bytes": 70164,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__hin_Deva__tam_Taml.csv",
+      "sha256": "ca7da20b5eb3d469f3a765c50e1685035b0e666e17c96b69c54cc5bea6cc94b4",
+      "bytes": 70327,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__hin_Deva__guj_Gujr.csv",
+      "sha256": "18d0040a67f055fbd2b0038e04291a1331af2ee891a80480e7a90c8a35547e2e",
+      "bytes": 70394,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__hin_Deva__hin_Deva.csv",
+      "sha256": "561968d3e7314ceb76ebe2a03c944bff0d21555cce83d3a8307672d99b34367a",
+      "bytes": 70515,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__hin_Deva__ben_Beng.csv",
+      "sha256": "211b4b364e7f4f10b0e59933d2d2e4fc96057864e877157f6b74e3223d7d1a0d",
+      "bytes": 70403,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__ben_Beng__pan_Guru.csv",
+      "sha256": "ceac2b0604ddf27f90f4a0fc123f0f1e5c6cc43d58b099fa7c218eef2d78775e",
+      "bytes": 70215,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__ben_Beng__mal_Mlym.csv",
+      "sha256": "ecde59c6329103fd29c1744a3b1ac57fe2d7057fcdd1a1e23be114403f95ee2d",
+      "bytes": 70305,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__ben_Beng__tam_Taml.csv",
+      "sha256": "bb1d78c1c11dc818eaaf4e53ad703935593ce25a82e6abaf1c7fc31fb064bf4f",
+      "bytes": 70318,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__ben_Beng__guj_Gujr.csv",
+      "sha256": "93bcfd886aeb318c0b6515a7349e4ac6325c580037576efbe0b6cf14b2b2f0c0",
+      "bytes": 70320,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__ben_Beng__hin_Deva.csv",
+      "sha256": "29940e84005dea5a59208990b254714592e06693fbbc902e43f44610b651824e",
+      "bytes": 70470,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__ben_Beng__ben_Beng.csv",
+      "sha256": "5b82666364754f4e9874c06abf6e5622be3d78d5a1eedc27070bc9aa2f893ba0",
+      "bytes": 70533,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__urd_Arab__pan_Guru.csv",
+      "sha256": "9182f50ddad8acf577adc69ab3c6d57110f175f4a9a289ca4cec8650d528657b",
+      "bytes": 70227,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__urd_Arab__mal_Mlym.csv",
+      "sha256": "247b4f0501f7fea989657db27e3c5bda326d8176572f2c3769b4b1d1513ace5a",
+      "bytes": 70243,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__urd_Arab__tam_Taml.csv",
+      "sha256": "bf357787355d941251c5e0939c011fe2bdb88aa4f841533d0c3fb4a0b4e8bc8a",
+      "bytes": 70285,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__urd_Arab__guj_Gujr.csv",
+      "sha256": "a77288f7b7b98bc466702fe6dbd3a457cc54fe001240dfa8b1f9405200a84d51",
+      "bytes": 70287,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__urd_Arab__hin_Deva.csv",
+      "sha256": "90846b10127a26cf1724dde0ca1fe48a6477e7b86b0cd2dc4b625eac0c42521a",
+      "bytes": 70328,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/intervention_tf/mar_Deva__urd_Arab__ben_Beng.csv",
+      "sha256": "8fec5428917c7f3bf1898ebbec1f9c110c34f1ea3bd033127ff21919878b303d",
+      "bytes": 70321,
+      "study": "it2",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/holdout/analysis/generation_lid_chrf.csv",
+      "sha256": "49eeece98291d2d235ac3857db8170fb9aa3b2c1095d266208a5125920f95cac",
+      "bytes": 3164598,
+      "study": "it2",
+      "rows": 4200.0,
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/run_lock.json",
+      "sha256": "fd5c66ad9c037171973e987baea233e4012fd8b7db1dea4a442291eb4937342d",
+      "bytes": 798,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/analysis/baseline_analysis.json",
+      "sha256": "0e8390bc54130a59d678e6be56c68d6ad0d1ccf2764c24b54ca6ae7dba4c3ccd",
+      "bytes": 3404,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/analysis/intervention_analysis.json",
+      "sha256": "79a9281c82a71d6f555056a56f9ca7704c9bb3996ed38f5bf9682de234b216f7",
+      "bytes": 5291,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/analysis/diagonal_reproduction.json",
+      "sha256": "2d91bc1905c4424744743ccc763bf7736cc8f1049c5647d9ba81f5db125c03dc",
+      "bytes": 266,
+      "study": "",
+      "rows": "",
+      "eligible_rows": ""
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/asm_Beng__ben_Beng__ben_Beng.csv",
+      "sha256": "2064bc6293a2865309e16516071df5c59022b912e16c96fdab5fd4b283cff36e",
+      "bytes": 94477,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/asm_Beng__kan_Knda__kan_Knda.csv",
+      "sha256": "b577608427097fb2a9a00ae64ecddbdd38266e690dc0813509500fa28f7a92a6",
+      "bytes": 94667,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/ben_Beng__asm_Beng__asm_Beng.csv",
+      "sha256": "c151e1db1ddfd6fcbab4c87481f416fcb5cea4b18989d8717e1c35fa2bd453cd",
+      "bytes": 94872,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/ben_Beng__kan_Knda__kan_Knda.csv",
+      "sha256": "b8cd209b383a759a6fe1fd8cc91ad5083dc0bbdb37e5c20d5997bfecedf9d904",
+      "bytes": 94828,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/ben_Beng__mar_Deva__mar_Deva.csv",
+      "sha256": "bea2e02895ef5f8f10531916970e6121755ea6504c9234f3b9989163ba7fc6e0",
+      "bytes": 94681,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/ben_Beng__tam_Taml__tam_Taml.csv",
+      "sha256": "34dd6305e12e258a82fbc0c2d6f2e623be73ac0df0736be104219c2d06d950f8",
+      "bytes": 94927,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/guj_Gujr__mal_Mlym__mal_Mlym.csv",
+      "sha256": "0acbda7063180c28f70c5be357c1acbc0456771842c1206e15c802d55046610b",
+      "bytes": 94885,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/guj_Gujr__mar_Deva__mar_Deva.csv",
+      "sha256": "743b82bbe6ae411cb78b7c4dcef64800c2373c73acaf58c5a390a7e02e076ff4",
+      "bytes": 94721,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/guj_Gujr__pan_Guru__pan_Guru.csv",
+      "sha256": "f0e7f433bb0ee10ac03a95c6f4cf2e4b08b1b0e0ef1c1ba558a6499cf2d1de8d",
+      "bytes": 94780,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/hin_Deva__kan_Knda__kan_Knda.csv",
+      "sha256": "1097f756f9fe0630594cec12c4ab5d501f25c53c9034fb0f743228f1149af268",
+      "bytes": 94783,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/hin_Deva__mal_Mlym__mal_Mlym.csv",
+      "sha256": "18e4d46bbf17f256f7eda806ca18433c722084cebc72cb7dbeb5466c67f49050",
+      "bytes": 94825,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/hin_Deva__ory_Orya__ory_Orya.csv",
+      "sha256": "f21b16f1e446b7536517a02b212e72796f0dcea09e5d339e521b50bb6b3e5767",
+      "bytes": 94787,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/hin_Deva__tam_Taml__tam_Taml.csv",
+      "sha256": "5da204353dad25cac0925c7737bf4468dea22f09eafae485ac8c090272c48310",
+      "bytes": 94877,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/kan_Knda__asm_Beng__asm_Beng.csv",
+      "sha256": "f9a543bc88d15281b36ea46195928dfa4303f07dd5c2b9b75cc2910596dcd18b",
+      "bytes": 94760,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/kan_Knda__ben_Beng__ben_Beng.csv",
+      "sha256": "47702404293386f00e3bc6fb43df22bd64716e6cf250cc9ff2c44db0b98bfd28",
+      "bytes": 94619,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/kan_Knda__hin_Deva__hin_Deva.csv",
+      "sha256": "6aabeed62e2aed01e293118e63834b53a2ad8c7432c8002ed2ae6c0f97703b3b",
+      "bytes": 94592,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/kan_Knda__mal_Mlym__mal_Mlym.csv",
+      "sha256": "886c84e25998f1994666c2da333635dd767bc89e7c9ea4b336971fff951c4d17",
+      "bytes": 94897,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/kan_Knda__mar_Deva__mar_Deva.csv",
+      "sha256": "813f21e381342c9a1e5a9bcc91e548e3760cb29708c2d263170f9c588215a575",
+      "bytes": 94698,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/kan_Knda__tam_Taml__tam_Taml.csv",
+      "sha256": "46a9d60b3ed4ac6c3574e7572b5c6fe367edb8bbd9e0bfeeaf530f576ebfedbd",
+      "bytes": 94817,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/mal_Mlym__guj_Gujr__guj_Gujr.csv",
+      "sha256": "609980fbfe47a4b3ba7426defe6a9544867d17a809acde707b2364a0bfbecf5f",
+      "bytes": 94692,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/mal_Mlym__hin_Deva__hin_Deva.csv",
+      "sha256": "afa69e281e7b50335f4e4f216f76f57cf9db42791f8d1382e308d45aeff39570",
+      "bytes": 94560,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/mal_Mlym__kan_Knda__kan_Knda.csv",
+      "sha256": "d7e378175aced0fae1d577750f52b13176bc2568a2892982b30972894e7e9f7b",
+      "bytes": 94798,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/mal_Mlym__tam_Taml__tam_Taml.csv",
+      "sha256": "6c62596177c3a4bcdacd8c9f6bad05ebafd108b9843168c326528e0510a19b3a",
+      "bytes": 94859,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/mal_Mlym__tel_Telu__tel_Telu.csv",
+      "sha256": "bfff8f20f5119253d905c1f9fc02c157d2f75b48584ded9d2bbf209191e163c7",
+      "bytes": 94788,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/mar_Deva__ben_Beng__ben_Beng.csv",
+      "sha256": "ca28071d7a88b46fc228a0d6a69d1645f2e9ca04388685253922381cb0865dee",
+      "bytes": 94614,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/mar_Deva__guj_Gujr__guj_Gujr.csv",
+      "sha256": "727d3e552df5a250577f13aeae48e696b7809f4b0de422f28557a8803f73c56b",
+      "bytes": 94709,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/mar_Deva__kan_Knda__kan_Knda.csv",
+      "sha256": "3aa565d5c06332a91f3dab40ca1a36335c13ed812619a901cacf70f25e95f0f4",
+      "bytes": 94809,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/ory_Orya__hin_Deva__hin_Deva.csv",
+      "sha256": "dcafc3a172acd79191107371f21019cbffed71b03e05960788ec7532697a8df6",
+      "bytes": 94591,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/ory_Orya__tel_Telu__tel_Telu.csv",
+      "sha256": "3ccd6b7146e9dcf7dac782a726c5b082e56cc9c66cec59842081e202b81ef965",
+      "bytes": 94743,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/pan_Guru__guj_Gujr__guj_Gujr.csv",
+      "sha256": "90236621d8121c30c315d2e621eb1e323c9d2242bf88449b147a61700dc16702",
+      "bytes": 94642,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/pan_Guru__tam_Taml__tam_Taml.csv",
+      "sha256": "89e84bf644951fc9d2b9cd7989db5522cb17559a49a113e9fc8dc993e77546d9",
+      "bytes": 94773,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/tam_Taml__ben_Beng__ben_Beng.csv",
+      "sha256": "ecfa082cbadaaf05fef587a246f213461e17c641070da62b6ecec43340f51548",
+      "bytes": 94703,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/tam_Taml__hin_Deva__hin_Deva.csv",
+      "sha256": "37458e8f157e3b47f2cd71f7e87b100e18d12069489834e48ed2237e7ac8091c",
+      "bytes": 94568,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/tam_Taml__kan_Knda__kan_Knda.csv",
+      "sha256": "292ba6bfdd962065032c97497861e5cc02318a5027cab7162a9cc91e879b7659",
+      "bytes": 94808,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/tam_Taml__mal_Mlym__mal_Mlym.csv",
+      "sha256": "2bc67edf61d73b41edeb4d07adf90fad48b5bd2ffa335751cf8ca2663f3666d0",
+      "bytes": 94838,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/tam_Taml__pan_Guru__pan_Guru.csv",
+      "sha256": "f6ca99718db5ccdad447e9d68dc65869012dbb7693026e57b50b14d8f373ca6e",
+      "bytes": 94776,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/tam_Taml__tel_Telu__tel_Telu.csv",
+      "sha256": "3f3922a2af7a1b079f78588436b991aacc8da08cb814c3bd92afef386abfc5bd",
+      "bytes": 94793,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/tel_Telu__mal_Mlym__mal_Mlym.csv",
+      "sha256": "a8bda76d64a618a89ebfb3dda4c60857fbb6b8771e023e4a5a2d0b03ca0c4e2f",
+      "bytes": 94958,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/tel_Telu__ory_Orya__ory_Orya.csv",
+      "sha256": "30ae2f50cb771d050cf75524fa00dbaca65f8c968985e15b21caf2ba925b67f9",
+      "bytes": 94781,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/baseline_tf/tel_Telu__tam_Taml__tam_Taml.csv",
+      "sha256": "6c0f1cd62eff90c51d1c8ef632f3f86536fa50e2c27b1e88c1bedb40f51e79a5",
+      "bytes": 94912,
+      "study": "nllb",
+      "rows": 450.0,
+      "eligible_rows": 450.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__pan_Guru__pan_Guru.csv",
+      "sha256": "2e5ee41fbc760362af06cb91076f6fca2ba8fd6439c942cf48f9bdc750445970",
+      "bytes": 63226,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__pan_Guru__mal_Mlym.csv",
+      "sha256": "50057f69cfbc5c374d1dc84c8bb63f583d69137f7c753b3ddea8a92557b66842",
+      "bytes": 63284,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__pan_Guru__tam_Taml.csv",
+      "sha256": "352fb535cd93723feaedeb7293c08e223dda5c9eb8704586365e04eacae45f87",
+      "bytes": 63203,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__pan_Guru__guj_Gujr.csv",
+      "sha256": "0a820c205eac4ff04ac8e04919c5700e920c39fcf8ad830b3b93b958fb24f19e",
+      "bytes": 63270,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__pan_Guru__hin_Deva.csv",
+      "sha256": "daed27b7e6d3e49e0bcd325b3a891cc0bbd9c12f8470e5a55089dc8dd632e771",
+      "bytes": 63124,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__pan_Guru__ben_Beng.csv",
+      "sha256": "c5a67dab91c5977d853e8675821d867e034bfb2c61f7b972395c953d42049b2a",
+      "bytes": 63136,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__mal_Mlym__pan_Guru.csv",
+      "sha256": "a9cf0e3759799d405f4a11447f29917ea2525656f74c08787cb462f34b2b0f09",
+      "bytes": 63122,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__mal_Mlym__mal_Mlym.csv",
+      "sha256": "52c0a2bfbfac7e068c2a3b23921a939818346718a9ec3ccbf2624dd90a94ab9e",
+      "bytes": 63288,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__mal_Mlym__tam_Taml.csv",
+      "sha256": "661c223092a023667ab3fcb30937ac3b8904f3cdbbb37c36b95d18d464fde767",
+      "bytes": 63187,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__mal_Mlym__guj_Gujr.csv",
+      "sha256": "de0e7dea6eb7309ec51faf763473d5b15b8168a1e961a04cf4be152a116f47b2",
+      "bytes": 63074,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__mal_Mlym__hin_Deva.csv",
+      "sha256": "ee5ee51bf6661c4bfc94cbb5ed9c8fd07da9d8c80bf63a48f57c04c0c51c05f2",
+      "bytes": 63112,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__mal_Mlym__ben_Beng.csv",
+      "sha256": "ee2173ac2e7012dd6241e63f4e4408ea0782711eca7e5518f28479d1d39094c9",
+      "bytes": 63096,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__tam_Taml__pan_Guru.csv",
+      "sha256": "e2e56e6c3db4432672f8235054ba17681158e0534f57ff8e1a68ce12e3762646",
+      "bytes": 63135,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__tam_Taml__mal_Mlym.csv",
+      "sha256": "fae1c22d116c6287bdeced20f2a30f9a5fbfec0d0498380ab143b863c285b916",
+      "bytes": 63341,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__tam_Taml__tam_Taml.csv",
+      "sha256": "155dd155d4aa1847fdd3f86b915edb29ae98ecccbbe636690620c234ac4340a0",
+      "bytes": 63260,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__tam_Taml__guj_Gujr.csv",
+      "sha256": "9ff5854422083dc6fe73864eef22902997ecbf2623a431a337c474502c9dec10",
+      "bytes": 63142,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__tam_Taml__hin_Deva.csv",
+      "sha256": "ae3744df7a2a48c61e22e2421a9ef6a2773137f44973379dfed4e78fbe50c547",
+      "bytes": 63193,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__tam_Taml__ben_Beng.csv",
+      "sha256": "4159b45985df4e82c5a94b002308db5eead2969f218342fe50b070da0ac941bc",
+      "bytes": 63157,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__guj_Gujr__pan_Guru.csv",
+      "sha256": "1e6c6bbb89da8495ab7ea16edf93b11f66ceb75d55d14aa3afcd2f24fb856a39",
+      "bytes": 63113,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__guj_Gujr__mal_Mlym.csv",
+      "sha256": "5e209b475b4484739191ff5f129aab8d222fab77395eb473da2f017c21e85a14",
+      "bytes": 63149,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__guj_Gujr__tam_Taml.csv",
+      "sha256": "784c481d34cda65dc4816950983e763e367844401f4f35b5c67c13c5113b2750",
+      "bytes": 63144,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__guj_Gujr__guj_Gujr.csv",
+      "sha256": "dfd9278232e38bc837bc6cd8619cc564a8d2d2665f68c228a7c0706a0ee460a1",
+      "bytes": 63194,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__guj_Gujr__hin_Deva.csv",
+      "sha256": "fdd8becc257f3edffe2852b7793eda178525be0b7a8781454777880da1329cbf",
+      "bytes": 63108,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__guj_Gujr__ben_Beng.csv",
+      "sha256": "4bad9576d097363cc8d80ffb987ca4737a816124d1872a4df57a76af4ef22d49",
+      "bytes": 63044,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__hin_Deva__pan_Guru.csv",
+      "sha256": "a3fb8ed34561c336a37b515fe0e7c889d57298ff2bea61bddabcf0afa0b183a3",
+      "bytes": 63242,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__hin_Deva__mal_Mlym.csv",
+      "sha256": "9f15d881549f2fe7615982504e8626a7036526f42ed9e6eed9066304eef98c47",
+      "bytes": 63317,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__hin_Deva__tam_Taml.csv",
+      "sha256": "cefe0f0a70aba81b16c409826c5636bd309e83998e412762f191d8ca8dfc3179",
+      "bytes": 63267,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__hin_Deva__guj_Gujr.csv",
+      "sha256": "6ab51407794d5bc1eeedf3a9a204c3038fccb12c6dbdb3cda872a18f1c2c081f",
+      "bytes": 63208,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__hin_Deva__hin_Deva.csv",
+      "sha256": "4325708bbe7b92a3a78d86a748206b852c36f4f2b3d4704e44b0b9090576f24b",
+      "bytes": 63122,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__hin_Deva__ben_Beng.csv",
+      "sha256": "b03747e086465ee67147fe0bb3c45931c76de2ac8a09d888f8936fe53765d09f",
+      "bytes": 63211,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__ben_Beng__pan_Guru.csv",
+      "sha256": "3b9752979b49dec7ccd82dbe55ab733a0525f9deebfb10f7f312344e92872d08",
+      "bytes": 63127,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__ben_Beng__mal_Mlym.csv",
+      "sha256": "9d949364931726dd3a288168754b32005e4ed2c3209553a2de0673e6655b2678",
+      "bytes": 63242,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__ben_Beng__tam_Taml.csv",
+      "sha256": "e9537fc6de59699b8c22cbf2c6c518a66241e0af90b486b851fc45d7d7c96a82",
+      "bytes": 63209,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__ben_Beng__guj_Gujr.csv",
+      "sha256": "c501c9f2de121f4ae2e15b1817a005554aeca66572e017d8a715f0943fcee89e",
+      "bytes": 63151,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__ben_Beng__hin_Deva.csv",
+      "sha256": "d44a12e7af5eb0b4bb38557c6db473f7256d64d7d7fd4fa551c4324b9ac5d9a1",
+      "bytes": 63077,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__ben_Beng__ben_Beng.csv",
+      "sha256": "cb1ae1f5d583eb04fd009c7c9d6cd3601ecbcad1409512aac563b6508f23538e",
+      "bytes": 63197,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__urd_Arab__pan_Guru.csv",
+      "sha256": "701a5169b35bf7b261fbb7d3c78ec7421c0df62683c940714e6fd3607e9c3b89",
+      "bytes": 63221,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__urd_Arab__mal_Mlym.csv",
+      "sha256": "a5a1aae60221c5abbdd24155a150359fdaf7a3b111acdb1edf79c5c510082c7f",
+      "bytes": 63332,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__urd_Arab__tam_Taml.csv",
+      "sha256": "ab290af6ff00b8764dbbd1fc7ce9eaaf116d2f07eb69a8992e8e14526fe0b63c",
+      "bytes": 63268,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__urd_Arab__guj_Gujr.csv",
+      "sha256": "0007d86d3ffdc340cb0e7e26a4bc0ea38f9a5564779d7aa5cc064a11981ec8f1",
+      "bytes": 63212,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__urd_Arab__hin_Deva.csv",
+      "sha256": "c12176f026e795150adb45e391efedfe6a4715b3b130760964409ce5cf529c11",
+      "bytes": 63112,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/kan_Knda__urd_Arab__ben_Beng.csv",
+      "sha256": "444cb3bf0be9508ef84749f10ea30a2a4277ffb0b54ef16cdd484ff59f9bc20e",
+      "bytes": 63196,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__pan_Guru__pan_Guru.csv",
+      "sha256": "a1e1dfc969c2bb6c5f379bf2203efbae9ee9622388ac4eb011d91ab0cf6485bc",
+      "bytes": 63291,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__pan_Guru__mal_Mlym.csv",
+      "sha256": "78d0ca2b8bbe95d2c456c9582da94b1d4ebf70533a8714beca55f4c86972bb5b",
+      "bytes": 63291,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__pan_Guru__tam_Taml.csv",
+      "sha256": "0325dd864e0cd2bba0b90677c31d9cf8736d1b893207fb4245e2a7b96995ffaf",
+      "bytes": 63214,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__pan_Guru__guj_Gujr.csv",
+      "sha256": "4cb8e6471224e09f18274c27feb62fcf1375ff90f40aa0a2ef60d4ef2f19376e",
+      "bytes": 63136,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__pan_Guru__hin_Deva.csv",
+      "sha256": "95d1d06391a47d1b56fba47cbf33fdaa63b6684eebb040c8d5fba773771e5a64",
+      "bytes": 63132,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__pan_Guru__ben_Beng.csv",
+      "sha256": "e6f7d1bda3d9be565cfe30a46cc3ef3ba39ed6aa1e8b2ac7d1ae1eebb1c98cf5",
+      "bytes": 63153,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__mal_Mlym__pan_Guru.csv",
+      "sha256": "8db6d407270a2f78f73c9bd0563bcf4e85777f6b23bf8c9057b06f0bd41133aa",
+      "bytes": 63175,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__mal_Mlym__mal_Mlym.csv",
+      "sha256": "2d9c03b2d5a33c0a56a88146a0ddcd08be3979a90d496629578300415c732a4e",
+      "bytes": 63343,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__mal_Mlym__tam_Taml.csv",
+      "sha256": "bc1871098d7f411f08d87384f62ff2859e036170ecd35f2ba9b0a9fdbe7575dc",
+      "bytes": 63306,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__mal_Mlym__guj_Gujr.csv",
+      "sha256": "ae7303c57f92537764896c79e8f4b95886900b77f8c98736388402e2beb9f0c8",
+      "bytes": 63144,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__mal_Mlym__hin_Deva.csv",
+      "sha256": "b44208e69c216ee8ca6242f9266a5476df90c92cf6564ba8625e917d8800dfc8",
+      "bytes": 63109,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__mal_Mlym__ben_Beng.csv",
+      "sha256": "a073a248f73f65b97ed542756b878a4a32dc1b82f6044a7c1560d7587c328412",
+      "bytes": 63085,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__tam_Taml__pan_Guru.csv",
+      "sha256": "192e072973fd2a7b7747e20fb84cb0b2d22d77fcb1793665db268c0e6602bb4e",
+      "bytes": 63123,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__tam_Taml__mal_Mlym.csv",
+      "sha256": "99df72a194ccdc63407edbb78e5ebd5b27ac65a3d5305c67a87c0fb223eee4b5",
+      "bytes": 63349,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__tam_Taml__tam_Taml.csv",
+      "sha256": "a88c1765e95954e8d7c5aaa4c0861ac8656024809fb0c4680ca021ed15427932",
+      "bytes": 63258,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__tam_Taml__guj_Gujr.csv",
+      "sha256": "c954ad5be2ef915ba88959dc3af14356398f8e5b34e4198d38342523eab7b374",
+      "bytes": 63188,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__tam_Taml__hin_Deva.csv",
+      "sha256": "fefc74cd7a648a26af1917310cc90dc9befcf2a399a785a648dc15517bac1b95",
+      "bytes": 63149,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__tam_Taml__ben_Beng.csv",
+      "sha256": "d55186693b03c279ce57d6a681285baecda3407b4b9a7e5140d717f1129ed59b",
+      "bytes": 63183,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__guj_Gujr__pan_Guru.csv",
+      "sha256": "cc4cb8ec531c7be91e7f767b9cae22fef1a2712fac3eed7aa92b73d23e5d66a1",
+      "bytes": 63154,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__guj_Gujr__mal_Mlym.csv",
+      "sha256": "f8b78e8f84cd5177ca5fb21be51970fe18ba194e4a2629f512d490e87b52a6a9",
+      "bytes": 63236,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__guj_Gujr__tam_Taml.csv",
+      "sha256": "411cdb3390c80a99311760be88c7906b529094b5e94fee5c37bd6929011237c8",
+      "bytes": 63172,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__guj_Gujr__guj_Gujr.csv",
+      "sha256": "7425be34aa0fa25ffeda50b0afe8fc6c5196d47fc0977e0fc31353398a289ae1",
+      "bytes": 63209,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__guj_Gujr__hin_Deva.csv",
+      "sha256": "1656b66f6cbb4734b8aaac01f559199edc1a728daf2a4739f283f12f637866a7",
+      "bytes": 63097,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__guj_Gujr__ben_Beng.csv",
+      "sha256": "0a6eaf26644a06824bc53e1a6307886eedce9b80e083fab12a593316d0c9a7e3",
+      "bytes": 63075,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__hin_Deva__pan_Guru.csv",
+      "sha256": "a65ddeaf44b7b07764f7617eb449b1ad37f222a5269ca25b474543ab49d08770",
+      "bytes": 63272,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__hin_Deva__mal_Mlym.csv",
+      "sha256": "2fc40917cdfab4fb6197b24ec982f5c0c51fdc1ab95b4c1c4b962c79e76d10f3",
+      "bytes": 63349,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__hin_Deva__tam_Taml.csv",
+      "sha256": "0ff8c34a183dac30a9a24022979935b9c3459cda74021a6facc2a9585d634b9e",
+      "bytes": 63225,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__hin_Deva__guj_Gujr.csv",
+      "sha256": "accff968b95c6ba31790ed5bdaa0c2347b1588887afa5e3e4853adc2b8002acf",
+      "bytes": 63183,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__hin_Deva__hin_Deva.csv",
+      "sha256": "0e4cc768ded6fada2edb1515c4842c652bb0b4443507acf117df3a711cc26f2e",
+      "bytes": 63125,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__hin_Deva__ben_Beng.csv",
+      "sha256": "216d4b986ece83c547064c26724a2251809c93d063d7201bd69b04d54e6133e0",
+      "bytes": 63132,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__ben_Beng__pan_Guru.csv",
+      "sha256": "ce7ad4e874b3b64e01e502da5d3f349ea826333a5e2ff59c90624b4b1f522417",
+      "bytes": 63114,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__ben_Beng__mal_Mlym.csv",
+      "sha256": "76cc36936e6b56b2b0d041fcdadd0c6e78a1bf655b077474d84c8775eaa59731",
+      "bytes": 63282,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__ben_Beng__tam_Taml.csv",
+      "sha256": "4c035ec61a84f502a97e990113f8b64e80ca195614d2498d1dce8ef9b44327f4",
+      "bytes": 63212,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__ben_Beng__guj_Gujr.csv",
+      "sha256": "03935025e5c38c3588f47d72ea98318d776c6b8af1368bb11ff74014ff093bd3",
+      "bytes": 63162,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__ben_Beng__hin_Deva.csv",
+      "sha256": "e51cbeec4e0e347074468f147c1844e5d6b34c44d4f4c51383cecba9ab8f6cf3",
+      "bytes": 63129,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__ben_Beng__ben_Beng.csv",
+      "sha256": "56291d2ff9f6024f5c12689d13f93ac08763e5832f36624a7000860ec7593d7f",
+      "bytes": 63233,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__urd_Arab__pan_Guru.csv",
+      "sha256": "f41c4d64f5c76101ea9160d8939f783512d8fdf68a926ff9ff6f34b37866f098",
+      "bytes": 63298,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__urd_Arab__mal_Mlym.csv",
+      "sha256": "8066eb102e83d5b6e525cb11522e4acbb9ffbbb5d239e5f1b046a425bf8688ff",
+      "bytes": 63342,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__urd_Arab__tam_Taml.csv",
+      "sha256": "16a69a8fa89af3f8a0d292a18f0a134a4f4ed0d7fa6eb193d13735371e3347a6",
+      "bytes": 63279,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__urd_Arab__guj_Gujr.csv",
+      "sha256": "07a699c2205b2830cd649e4fdab0f73a106f4db29049a7b34ad02027a0906305",
+      "bytes": 63244,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__urd_Arab__hin_Deva.csv",
+      "sha256": "dea2aa908251ed28e7ca0e6bb8c7c03e80bf470578381884c66c7bc9d37efff3",
+      "bytes": 63144,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/tel_Telu__urd_Arab__ben_Beng.csv",
+      "sha256": "e2ba67456afdbbb66c7262dcfa8b77e800004265fcb8e1183aeef69ce05d432a",
+      "bytes": 63212,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__pan_Guru__pan_Guru.csv",
+      "sha256": "6aaa1a01a0d09f5db87a68f2cc4ae5b4806a797d7148589431fd67b59f6c9ea8",
+      "bytes": 63264,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__pan_Guru__mal_Mlym.csv",
+      "sha256": "fec214e301cc54ef171d43f018dc47cfa568b22c1b634c9df6d6e90c19d509a3",
+      "bytes": 63255,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__pan_Guru__tam_Taml.csv",
+      "sha256": "e3d0bfc1934539cf2250ff8723f4ee565ea350d9b87d6c2e23c49fef26d054e4",
+      "bytes": 63181,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__pan_Guru__guj_Gujr.csv",
+      "sha256": "78cc3517d2b8bbde19f01ef16e968a405d826531d538b55f423cb48e5b5a482e",
+      "bytes": 63195,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__pan_Guru__hin_Deva.csv",
+      "sha256": "4d2539deb90054d814e59956d67ed43c53d9c30c5de851bf8a87e14308bb680e",
+      "bytes": 63072,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__pan_Guru__ben_Beng.csv",
+      "sha256": "e6a3f9780ebf91abd035e85eba76c97ab497d0f89bc3384850baf6bb6eaeb74d",
+      "bytes": 63072,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__mal_Mlym__pan_Guru.csv",
+      "sha256": "3a7c0c92fd94182e70504fec420a3888d130b3462a639d487ec9352a3ffd0dee",
+      "bytes": 63064,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__mal_Mlym__mal_Mlym.csv",
+      "sha256": "001795799d7966134e723b162eb588ef276f1380840c3d9970da087b87c243ea",
+      "bytes": 63345,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__mal_Mlym__tam_Taml.csv",
+      "sha256": "0adb64aaf92f45e5281a3207375cc91c40a7a3ae227ecb5276461f69651845a0",
+      "bytes": 63212,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__mal_Mlym__guj_Gujr.csv",
+      "sha256": "83c7306bb9ff79541706407eab7815ecbef6c2897c3613dcaa5363b0e2b55518",
+      "bytes": 63078,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__mal_Mlym__hin_Deva.csv",
+      "sha256": "45e9583197f6b6829cbbff43f9231001af1d9e9c8da77410fb7031ee26fdd5df",
+      "bytes": 63020,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__mal_Mlym__ben_Beng.csv",
+      "sha256": "76902c96dfd3b175dda5bbe7b4a466a22d49d8e7e7771f14c25c54ca0d471b58",
+      "bytes": 63123,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__tam_Taml__pan_Guru.csv",
+      "sha256": "fd9a82466eda275510400a18391d4f274162e73bd9fe7e608a74db1037c7b93d",
+      "bytes": 63115,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__tam_Taml__mal_Mlym.csv",
+      "sha256": "e96d926e91a33cb37a0419f53c3017faf6daba59310a22451a89de327a46aaf9",
+      "bytes": 63366,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__tam_Taml__tam_Taml.csv",
+      "sha256": "73bc3c14520f054321c24e640f5d34c621b6f321d2b95b42646beac6f68a8bce",
+      "bytes": 63295,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__tam_Taml__guj_Gujr.csv",
+      "sha256": "863435960b3f7b85f4ec51078a83dd646a95dddf232455267b3b51a7d33b4dc4",
+      "bytes": 63163,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__tam_Taml__hin_Deva.csv",
+      "sha256": "9a4079c8a12da907978b173780f8612ff881cdd783da3f602dd54be8251dd679",
+      "bytes": 63122,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__tam_Taml__ben_Beng.csv",
+      "sha256": "5026cf92b3c48f3f00d8da6828ae2a0f495c465cfd6caf666be806c8f823b696",
+      "bytes": 63132,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__guj_Gujr__pan_Guru.csv",
+      "sha256": "8485db8c6077bebe2ccb5ae8a5d89d355bb2218d313351576645c7bc7f9f2f61",
+      "bytes": 63116,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__guj_Gujr__mal_Mlym.csv",
+      "sha256": "77c409ed83bd3b3f6e4b3fb43b0341d5ce024f44da5c352832c6a6e32ff4244b",
+      "bytes": 63133,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__guj_Gujr__tam_Taml.csv",
+      "sha256": "ae9c8eb88a2688a0b48b39e5ed21482dc3b9ccda3a7911bad5035ccb4eca9c2e",
+      "bytes": 63176,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__guj_Gujr__guj_Gujr.csv",
+      "sha256": "c084f8b930737c9cc2b28e3feddacd5111eb6b45b9ac3dd4155bfe6b7c481d37",
+      "bytes": 63172,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__guj_Gujr__hin_Deva.csv",
+      "sha256": "06f5d8d237f9d4e7f9d1cc77ebd9bfe1efe784f5caf58505c487163a88125ead",
+      "bytes": 63083,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__guj_Gujr__ben_Beng.csv",
+      "sha256": "928af85c0b5f2706fdd6dc7166974b7234d0ea2d66ee627445e2b46d63b12354",
+      "bytes": 63009,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__hin_Deva__pan_Guru.csv",
+      "sha256": "7ccf7129a026748c4b52f8fe207d54827d4263c324b9ac5a9e27dbdf605be834",
+      "bytes": 63170,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__hin_Deva__mal_Mlym.csv",
+      "sha256": "61d16a08e128f2e0d1407e747696f884233b88973dea7dc8175735269446caad",
+      "bytes": 63245,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__hin_Deva__tam_Taml.csv",
+      "sha256": "1e2906889aa2e9c0ecd2d2a8f554a3b8f4d44b11157dd3628b04790095ce639f",
+      "bytes": 63226,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__hin_Deva__guj_Gujr.csv",
+      "sha256": "8c2b590d30c80ea1f20a5cd447d54a8d1f549a08a9e2d15457726fe0c5dc94bf",
+      "bytes": 63158,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__hin_Deva__hin_Deva.csv",
+      "sha256": "ae0d8eeb55ce3fb9d2fcd82874b9455c5e55328d4b380a2454981115992d5537",
+      "bytes": 63122,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__hin_Deva__ben_Beng.csv",
+      "sha256": "150f0c65401e3a1d56e16252186ed0bc4f8144a919546185a8d9d79bc11619ee",
+      "bytes": 63129,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__ben_Beng__pan_Guru.csv",
+      "sha256": "61dd42c4e1b3ac68d38e4d3aeafdc5ed61347ea1be4b703c415d9455d81ee6ed",
+      "bytes": 63135,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__ben_Beng__mal_Mlym.csv",
+      "sha256": "e9b9a367fbfca4645680e5f3c91914ff1bc4f9f5e01821449e740c660abcad11",
+      "bytes": 63183,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__ben_Beng__tam_Taml.csv",
+      "sha256": "611e12267e07a691e81ee390b6bed0e5721283155891fe54099f899c81942746",
+      "bytes": 63190,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__ben_Beng__guj_Gujr.csv",
+      "sha256": "efcd87cb86cc74cf8fba8ef1dc0939c3d147ad0d10a47cdb450d23743b221d43",
+      "bytes": 63129,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__ben_Beng__hin_Deva.csv",
+      "sha256": "073891585c844b92d257d82bd6f52143597a78e4e1cf3e00e3cbfe5ac45cdfbd",
+      "bytes": 63099,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__ben_Beng__ben_Beng.csv",
+      "sha256": "dd36fecff80c0b090fb6767c8b9535ff63ec9f380588c2e73da8d4dd0c9621f6",
+      "bytes": 63204,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__urd_Arab__pan_Guru.csv",
+      "sha256": "84120ec01096c95481c3d8a68c9bc1815ab6033aac06a4fd480033bd92f64eea",
+      "bytes": 63321,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__urd_Arab__mal_Mlym.csv",
+      "sha256": "828e82b44910e56e8bca7121066c3a57f4b46f9dd1be7b423782eb65579f3547",
+      "bytes": 63281,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__urd_Arab__tam_Taml.csv",
+      "sha256": "7a305ac8fe6972ea92cb03f0d06e6af2633c95258ee2eb3449ab0e06f72ed1d6",
+      "bytes": 63205,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__urd_Arab__guj_Gujr.csv",
+      "sha256": "fbc87fe19aeb0a76d9bf83ae65da7a8fa4bcc26e22d59547093ef3c3c7285235",
+      "bytes": 63184,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__urd_Arab__hin_Deva.csv",
+      "sha256": "adb2bd823fc66f002bb029d860c59923299c76f685bd3c7750c1141a0083b44b",
+      "bytes": 63054,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/ory_Orya__urd_Arab__ben_Beng.csv",
+      "sha256": "7de794f7aa7fc9f163fec4ca5bc9233bf3d5f59658dc9854e2fd260abacb02a1",
+      "bytes": 63154,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__pan_Guru__pan_Guru.csv",
+      "sha256": "7ed4603c3ebc5bff0792f17c8b0ad30d5530249f80c5fb6d0e5ed1edb4215778",
+      "bytes": 63280,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__pan_Guru__mal_Mlym.csv",
+      "sha256": "b2c7732a61e6c81d4231680cf0a58d55c006a099e04b4d9d00b9a3363e436ac6",
+      "bytes": 63269,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__pan_Guru__tam_Taml.csv",
+      "sha256": "fea7d64c6e61c90843a28335854fc79bd592b865b4ad35b5753843c5314b00f7",
+      "bytes": 63175,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__pan_Guru__guj_Gujr.csv",
+      "sha256": "889d61d96a15be9be2d7fa68abf81d25f93ecef3da8f7c0c54a8ddcd56e5165a",
+      "bytes": 63244,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__pan_Guru__hin_Deva.csv",
+      "sha256": "d9e7e8981e026be1e42676e3215861097dea46420a10a57786f28d9522d82c59",
+      "bytes": 63144,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__pan_Guru__ben_Beng.csv",
+      "sha256": "8d3477211b4665b8d963263952de256f9301ced08c1e4d63372495ef8395f1b6",
+      "bytes": 63128,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__mal_Mlym__pan_Guru.csv",
+      "sha256": "8647c0b956582778a738fce604aec28a35596f1f9d83ffeeb090c1c2745ed15f",
+      "bytes": 63105,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__mal_Mlym__mal_Mlym.csv",
+      "sha256": "a798ee3ed92b837587d3d8bc2e8f9995dbe4d5570d851639e813f030b75356cc",
+      "bytes": 63326,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__mal_Mlym__tam_Taml.csv",
+      "sha256": "94497a1f248d9f86d1738284f7c6884b3cf71e1bc9ee9e075eb74013d7b73d6f",
+      "bytes": 63286,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__mal_Mlym__guj_Gujr.csv",
+      "sha256": "3850857dd69b87aaad12628bc2620c93215a8d0e94825778fb4015b97e67da17",
+      "bytes": 63075,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__mal_Mlym__hin_Deva.csv",
+      "sha256": "e92edd6769ea067675ca537be4e54f9cecf2629cd1ba4108853ce809f3b4f25b",
+      "bytes": 63139,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__mal_Mlym__ben_Beng.csv",
+      "sha256": "6b9f8201290120f7012812008e273515f1f3c32cc3e21b968fba3836f2c673f3",
+      "bytes": 63129,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__tam_Taml__pan_Guru.csv",
+      "sha256": "2d855a506cfb26bd401000610201b7214631dba0c2eb1f326a2674ff17cd065c",
+      "bytes": 63143,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__tam_Taml__mal_Mlym.csv",
+      "sha256": "9c637d39539bd773a9f2b7763aebef431e74662bbd180b10267b7376e988384f",
+      "bytes": 63350,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__tam_Taml__tam_Taml.csv",
+      "sha256": "9d6c80ca0415187c00cf17b70ef85edea270f9a52c9a2d352d5b7c68e4119133",
+      "bytes": 63339,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__tam_Taml__guj_Gujr.csv",
+      "sha256": "88dd012f712e32c9d44aa44a3f7f8cf7a750a9451e74150f23a9b455072eb787",
+      "bytes": 63137,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__tam_Taml__hin_Deva.csv",
+      "sha256": "d81fafe95a0992755ac968df05dba4785f8ab132a422d87004571572a277db73",
+      "bytes": 63148,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__tam_Taml__ben_Beng.csv",
+      "sha256": "061815ed32d6ebd2fac956125bc3e026b488a90159bfe0177bb6f811a871d248",
+      "bytes": 63165,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__guj_Gujr__pan_Guru.csv",
+      "sha256": "db0e63c08e7bcd7d18133a6f3472086076a0d4e2ed06059e6e56afd04420cb0d",
+      "bytes": 63152,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__guj_Gujr__mal_Mlym.csv",
+      "sha256": "9d904b3131bb6937088601a1f557d101637d290627cedee54200520cb6745cfc",
+      "bytes": 63161,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__guj_Gujr__tam_Taml.csv",
+      "sha256": "d1c0d80cd7c3d7bdedf3025b09836533068158958add107d49fa8bec526d8470",
+      "bytes": 63172,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__guj_Gujr__guj_Gujr.csv",
+      "sha256": "064ba018acb5456c87a48a85b65eeabc308b471f69bebbcda4c22f9408ac651d",
+      "bytes": 63209,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__guj_Gujr__hin_Deva.csv",
+      "sha256": "3eae850c6db316feddac0992ca6b71314f054f4c7355661cb514c0b9abb8ce50",
+      "bytes": 63115,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__guj_Gujr__ben_Beng.csv",
+      "sha256": "a498e835887eafcd208c57da31ff308a5291fb525b81f74971e9b14f3c11ff32",
+      "bytes": 63061,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__hin_Deva__pan_Guru.csv",
+      "sha256": "4da1a319c3e0ce17521a4c9e8f38f306dc8ec5f1308379e752137e3edd31dbd3",
+      "bytes": 63263,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__hin_Deva__mal_Mlym.csv",
+      "sha256": "32ec618c877c692762f2033a1a7b4e1513dceff50cb05788d30d31c4a71c96c5",
+      "bytes": 63310,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__hin_Deva__tam_Taml.csv",
+      "sha256": "da23853a4ed53e9a37c1a3cb0fedb0ec9f582c1c4d30a5fa56d21d7611d0437b",
+      "bytes": 63276,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__hin_Deva__guj_Gujr.csv",
+      "sha256": "7cc140a87b46933e201d7705e1c5026bb3a29f3dca317be358b943c65b7ab6de",
+      "bytes": 63107,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__hin_Deva__hin_Deva.csv",
+      "sha256": "3403c0d618431250c876aac1fe421e525a32a9cbecd715f1b64cbe769ff87651",
+      "bytes": 63176,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__hin_Deva__ben_Beng.csv",
+      "sha256": "363f3727f308c3ad1d5db16d2ef7d8b08a2c77e3667ebe58d056881d36c6e709",
+      "bytes": 63175,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__ben_Beng__pan_Guru.csv",
+      "sha256": "1653e6dbe8dfac1e8c7bbdfdf35ccd3a9953bce276dbbf7eb77cde7df01e98f7",
+      "bytes": 63177,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__ben_Beng__mal_Mlym.csv",
+      "sha256": "08832502253829cf41a504e7fb3e2f51a4118167e39cfbcb296a16932a7f73cf",
+      "bytes": 63253,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__ben_Beng__tam_Taml.csv",
+      "sha256": "e8f343a15c2fa017076ae33efd42875fb6f7ccdfd3568d3dbc86ee45f5ede945",
+      "bytes": 63164,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__ben_Beng__guj_Gujr.csv",
+      "sha256": "de94b2045679470995091026fa20ee235822d76e0ff95bccf3cf31e16ca309ea",
+      "bytes": 63145,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__ben_Beng__hin_Deva.csv",
+      "sha256": "a8f50dabe4ab13fb62b5c2bfa73eefb2dfd83566044d319033dc9272c0f3dcfe",
+      "bytes": 63208,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__ben_Beng__ben_Beng.csv",
+      "sha256": "d5a9c1d8fa5aaa860a1ed81200dc226d4219e04b16f79d95d99120ba769861d9",
+      "bytes": 63214,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__urd_Arab__pan_Guru.csv",
+      "sha256": "35beb6e17eb5e93b3f4f5435535d1931d922350231cb6c6b135c87890586a7cb",
+      "bytes": 63305,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__urd_Arab__mal_Mlym.csv",
+      "sha256": "dff2cd9cad090dc85a2f4b4365b95d55b20a943be260de7d02cddecbda9ebd53",
+      "bytes": 63322,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__urd_Arab__tam_Taml.csv",
+      "sha256": "83b979b94f67d21a7db69313098bba893e2e42d03662e600b740a309ef19f312",
+      "bytes": 63249,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__urd_Arab__guj_Gujr.csv",
+      "sha256": "01d6e00b4ae66fd127d275da42250a4ef6a05150b6f84e3e28a3a44fbfbf3678",
+      "bytes": 63216,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__urd_Arab__hin_Deva.csv",
+      "sha256": "e815ae087bae8b8f4ea15fa8e3aa98a275ae477f5f2b25a7cb51cfcf661d4cf5",
+      "bytes": 63145,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/intervention_tf/mar_Deva__urd_Arab__ben_Beng.csv",
+      "sha256": "c687c38cd97b97e72f82ccaa4fdee5513b396bb06d2ebf07c123554e1db47a58",
+      "bytes": 63191,
+      "study": "nllb",
+      "rows": 300.0,
+      "eligible_rows": 300.0
+    },
+    {
+      "path": "/content/drive/MyDrive/fp32_tag_intervention/confirm/analysis/generation_lid_chrf.csv",
+      "sha256": "2af1f96670ecb1e04df279ac6ac6521d652de964815ed1b01e1e08c61f4a4e6a",
+      "bytes": 3107748,
+      "study": "nllb",
+      "rows": 4200.0,
+      "eligible_rows": ""
+    }
+  ],
+  "common_intervention_meanings": [
+    1,
+    12,
+    18,
+    20,
+    21,
+    22,
+    23,
+    25,
+    29,
+    31,
+    34,
+    35,
+    36,
+    38,
+    39,
+    43,
+    44,
+    46,
+    48,
+    50,
+    53,
+    55,
+    59,
+    60,
+    62,
+    66,
+    67,
+    74,
+    76,
+    84,
+    97,
+    103,
+    105,
+    107,
+    109,
+    110,
+    114,
+    115,
+    116,
+    118,
+    119,
+    123,
+    129,
+    131,
+    134,
+    137,
+    139,
+    141,
+    143,
+    144,
+    145,
+    146,
+    148,
+    149,
+    152,
+    155,
+    159,
+    160,
+    161,
+    169,
+    171,
+    173,
+    179,
+    180,
+    182,
+    183,
+    184,
+    187,
+    189,
+    191,
+    192,
+    193,
+    202,
+    209,
+    210,
+    212,
+    213,
+    215,
+    216,
+    217,
+    220,
+    221,
+    223,
+    224,
+    230,
+    233,
+    238,
+    239,
+    240,
+    242,
+    244,
+    250,
+    258,
+    260,
+    262,
+    265,
+    270,
+    272,
+    277,
+    280,
+    282,
+    286,
+    287,
+    289,
+    292,
+    293,
+    294,
+    296,
+    297,
+    301,
+    304,
+    308,
+    310,
+    311,
+    312,
+    317,
+    320,
+    322,
+    324,
+    326,
+    333,
+    334,
+    335,
+    338,
+    339,
+    340,
+    343,
+    349,
+    350,
+    353,
+    354,
+    356,
+    360,
+    361,
+    362,
+    363,
+    364,
+    371,
+    373,
+    379,
+    381,
+    382,
+    384,
+    385,
+    390,
+    392,
+    394,
+    396,
+    397,
+    401,
+    405,
+    406,
+    407,
+    408,
+    410,
+    416,
+    417,
+    418,
+    420,
+    421,
+    423,
+    424,
+    425,
+    429,
+    430,
+    431,
+    435,
+    436,
+    438,
+    443,
+    445,
+    446,
+    449,
+    450,
+    451,
+    453,
+    454,
+    455,
+    458,
+    460,
+    461,
+    462,
+    465,
+    466,
+    469,
+    473,
+    476,
+    477,
+    478,
+    480,
+    481,
+    482,
+    483,
+    485,
+    487,
+    488,
+    489,
+    491,
+    493,
+    496,
+    497,
+    499,
+    500,
+    504,
+    505,
+    506,
+    507,
+    513,
+    514,
+    516,
+    518,
+    519,
+    521,
+    522,
+    524,
+    526,
+    529,
+    531,
+    532,
+    533,
+    536,
+    539,
+    540,
+    543,
+    545,
+    547,
+    550,
+    553,
+    554,
+    556,
+    557,
+    558,
+    560,
+    562,
+    566,
+    567,
+    569,
+    570,
+    572,
+    573,
+    574,
+    576,
+    578,
+    581,
+    587,
+    589,
+    590,
+    593,
+    594,
+    598,
+    599,
+    600,
+    601,
+    602,
+    607,
+    609,
+    611,
+    614,
+    617,
+    619,
+    620,
+    624,
+    625,
+    626,
+    629,
+    635,
+    640,
+    642,
+    644,
+    646,
+    653,
+    659,
+    662,
+    664,
+    665,
+    666,
+    671,
+    679,
+    680,
+    686,
+    688,
+    691,
+    694,
+    695,
+    700,
+    704,
+    709,
+    714,
+    715,
+    716,
+    720,
+    721,
+    727,
+    729,
+    730,
+    732,
+    736,
+    738,
+    744,
+    749
+  ],
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.4"
+  }
+}

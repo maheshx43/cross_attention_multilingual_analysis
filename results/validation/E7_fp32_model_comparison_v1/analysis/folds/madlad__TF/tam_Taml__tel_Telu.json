@@ -1,0 +1,5169 @@
+{
+  "identity": "500dc60b1f07350623fbe54fb321daba12d577faeb4eb8f88fc17bbb1f470ca6",
+  "payload": {
+    "predictions": {
+      "M1_additive": [
+        0.19757632895246355,
+        0.21957957704580633
+      ],
+      "M2_bilinear": [
+        0.19941954045271565,
+        0.2192233097400058
+      ],
+      "M3_tanh": [
+        0.1992736853813271,
+        0.21957877563543962
+      ]
+    },
+    "selected": [
+      {
+        "model": "M1_additive",
+        "active_nonlinearity": false,
+        "parameters": 21,
+        "nominal_parameters": 21,
+        "selected_start": "OLS",
+        "converged": true,
+        "objective": 0.009228862110232267,
+        "gradient_inf": 0.0,
+        "iterations": 0,
+        "start_audit": [],
+        "main_coefficients_standardized": [
+          -0.08357114377721737,
+          -0.3713509978101367,
+          -0.31064293834987927,
+          0.43915728457417885,
+          -0.4940202673352028,
+          -0.10217662243637635,
+          0.3370923931781547,
+          -0.45280274134609005,
+          0.12257550536565501,
+          0.31147830081880296,
+          0.304474676524064,
+          0.6371122328410214,
+          -0.23731674211171752,
+          -0.8263373646547862,
+          2.064552025426022,
+          -0.11225404852540605,
+          -0.6413948183892647,
+          1.2866252018216675,
+          -0.8321212888999788,
+          -0.9838471153178926,
+          0.5137076192630287
+        ],
+        "response_center": 0.20859045173393526,
+        "response_scale": 0.01700176887042103
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "active_nonlinearity": true,
+        "parameters": 65,
+        "nominal_parameters": 65,
+        "selected_start": "20261118",
+        "converged": true,
+        "objective": 0.0001431546615870057,
+        "gradient_inf": 5.789010871460766e-08,
+        "iterations": 168,
+        "start_audit": [
+          {
+            "seed": 20261118,
+            "success": true,
+            "finite": true,
+            "iterations": 168,
+            "objective": 0.0001431546615870057,
+            "gradient_inf": 5.789010871460766e-08,
+            "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+          },
+          {
+            "seed": 20261119,
+            "success": true,
+            "finite": true,
+            "iterations": 109,
+            "objective": 0.0001431546105209578,
+            "gradient_inf": 6.3756031944334e-08,
+            "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+          },
+          {
+            "seed": 20261120,
+            "success": true,
+            "finite": true,
+            "iterations": 114,
+            "objective": 0.00017564689932950538,
+            "gradient_inf": 6.637840069128144e-08,
+            "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+          }
+        ],
+        "main_coefficients_standardized": [
+          -0.07691711489631176,
+          -0.3071267390592113,
+          -0.27362652043036195,
+          0.44359244845769485,
+          -0.5413941411537753,
+          -0.09530611161579647,
+          0.28240935830396285,
+          -0.42385320743215044,
+          0.06913103152380078,
+          0.30671464773848744,
+          0.3394926375486444,
+          0.5903298685056199,
+          -0.299876861193082,
+          -0.8284997822726612,
+          2.1449831803512285,
+          -0.1404729770285971,
+          -0.6083690403567641,
+          1.2675685509109005,
+          -0.8044752730352993,
+          -1.030243456557312,
+          0.5087420085121576
+        ],
+        "interaction_parameters": [
+          -0.38662127822191505,
+          -0.20695563346878648,
+          -0.47171686795280865,
+          0.24476864180316701,
+          -0.03376287687424988,
+          -0.014366354260913617,
+          -0.1969906434183463,
+          -0.1867106223354452,
+          0.22935028792710582,
+          -0.5865184966768244,
+          -0.013453348813369277,
+          0.39699060014705745,
+          -0.11988321498583203,
+          -0.09529896179354498,
+          0.02195379712054006,
+          -0.19676189193734894,
+          -0.04828212593332336,
+          -0.05220531024594938,
+          0.5430067953390734,
+          -0.009682530880079806,
+          0.10875689554264877,
+          0.021050481081455335,
+          0.41809282885651217,
+          -0.5121300035461637,
+          0.47718958104928316,
+          0.18745739775522918,
+          -0.024790891952074363,
+          0.05349020814361751,
+          -0.2608962731704152,
+          0.47174179518295856,
+          -0.3821511784398245,
+          -0.1643596881928537,
+          -0.3515202037201285,
+          -0.1690648717948124,
+          -0.11893357464836418,
+          0.1769082117440428,
+          0.07554377256971868,
+          0.08286827921916413,
+          0.04357755645297692,
+          0.015080093174403526,
+          -0.1422251460780848,
+          0.13617880424552997,
+          -0.01742474734288765,
+          -0.12077541614985939
+        ],
+        "response_center": 0.20859045173393526,
+        "response_scale": 0.01700176887042103,
+        "failed_starts": 0,
+        "parameter_count_note": "nominal allocated coefficients, not effective degrees of freedom; bilinear centering/gauge redundancies remain",
+        "prediction_outside_unit_interval": 0,
+        "validation_direction_MSE": 4.018242698244062e-05
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "active_nonlinearity": true,
+        "parameters": 117,
+        "nominal_parameters": 117,
+        "selected_start": "20261118",
+        "converged": true,
+        "objective": 0.0003725051299006623,
+        "gradient_inf": 7.568057141313768e-08,
+        "iterations": 130,
+        "start_audit": [
+          {
+            "seed": 20261118,
+            "success": true,
+            "finite": true,
+            "iterations": 130,
+            "objective": 0.0003725051299006623,
+            "gradient_inf": 7.568057141313768e-08,
+            "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+          },
+          {
+            "seed": 20261119,
+            "success": true,
+            "finite": true,
+            "iterations": 136,
+            "objective": 0.00042177369167843004,
+            "gradient_inf": 9.567439068808409e-08,
+            "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+          },
+          {
+            "seed": 20261120,
+            "success": true,
+            "finite": true,
+            "iterations": 183,
+            "objective": 0.0003831362221587247,
+            "gradient_inf": 6.685676818753313e-08,
+            "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+          }
+        ],
+        "main_coefficients_standardized": [
+          -0.12726227685609018,
+          -0.8279215766367094,
+          -0.749988913073594,
+          0.4828104924303591,
+          -0.786181063739756,
+          -0.03325329353847636,
+          0.6619230947751309,
+          -0.5522681056442519,
+          0.05867351339104348,
+          0.30511919258591874,
+          0.9762849614835372,
+          1.4394877807089117,
+          -0.20296986426268515,
+          -0.9177747586620363,
+          1.428521165156002,
+          -0.11745120141408141,
+          -0.6817475004942948,
+          1.028412909707282,
+          -0.7555600477620484,
+          -0.9246138697702173,
+          0.3132043092538545
+        ],
+        "interaction_parameters": [
+          -0.37222665152904766,
+          2.1417784815176885e-05,
+          6.868448623873817e-06,
+          -0.29194571819195325,
+          -0.007486881752999642,
+          1.4214428546474879e-05,
+          -1.3241062741837453e-05,
+          -0.48404617612537765,
+          0.07911943256366401,
+          1.4574415058789934e-05,
+          -2.232848621916115e-06,
+          -0.027419680628366094,
+          -0.17640906858060815,
+          -9.278561412915287e-06,
+          1.9171772109491804e-05,
+          -0.13912083015508364,
+          -0.6389573189488921,
+          1.800613689076543e-05,
+          -3.262841632913753e-05,
+          0.5239609490460608,
+          0.463692894037534,
+          6.335047091086317e-06,
+          3.1856158857681364e-05,
+          -0.03687932101128421,
+          -0.1090004903284969,
+          -1.9057519219586308e-06,
+          -3.310329567600628e-05,
+          -0.055891696101870884,
+          -0.17645172754936694,
+          -3.731528307515041e-05,
+          -6.526776961380018e-06,
+          0.14415600075821924,
+          0.008664099696348227,
+          -1.767205136368985e-05,
+          -1.2946937094635057e-05,
+          -0.00493527237399526,
+          0.24176895144005245,
+          2.1343337376052177e-06,
+          2.764425563188144e-05,
+          0.6550334782807069,
+          0.11944792280146159,
+          -6.9197039469413676e-06,
+          -1.3678602554348454e-05,
+          0.1886659029080657,
+          0.5016857671167004,
+          -1.807243400408286e-05,
+          -1.8749075262652765e-05,
+          0.7479065546930975,
+          -0.4764478711000921,
+          1.46146168029954e-05,
+          -4.080552660893128e-05,
+          0.4837253201591907,
+          -0.14966896391193435,
+          -6.917620099036215e-06,
+          -3.0990425053696763e-06,
+          0.0008525238733948993,
+          -0.5153279304990701,
+          -6.04443508343197e-06,
+          3.9686336006281e-06,
+          -0.423506450845572,
+          0.29604688999117007,
+          1.181658530776149e-05,
+          2.6455609303148866e-05,
+          -0.24290900827820952,
+          0.19434981767949808,
+          2.1227977254564505e-05,
+          -4.5050414672633136e-05,
+          -0.2451130464728471,
+          -0.1551920469655211,
+          -4.2536879896240966e-05,
+          -1.981228614137045e-05,
+          -0.13247553050505953,
+          -0.12754577006845763,
+          -2.6354149827076665e-06,
+          2.8941268164288843e-05,
+          0.15662977491712343,
+          -0.024735950276167505,
+          3.94575860595167e-06,
+          1.0405433353333191e-05,
+          0.11410207552608276,
+          -0.23745976262709695,
+          -3.8333030543222466e-06,
+          9.808963271926324e-06,
+          -0.05084347532943528,
+          0.12634926705698302,
+          -2.1364948488685834e-05,
+          -4.611027723855621e-06,
+          0.06314276266313688,
+          -0.5678768580595436,
+          -1.0241736191089966e-06,
+          -4.35493117762573e-05,
+          0.47153929982318454,
+          -1.0961257228444066,
+          9.288193601236513e-06,
+          -4.14010576768806e-05,
+          -1.2084371465573414
+        ],
+        "response_center": 0.20859045173393526,
+        "response_scale": 0.01700176887042103,
+        "failed_starts": 0,
+        "parameter_count_note": "nominal allocated coefficients, not effective degrees of freedom; bilinear centering/gauge redundancies remain",
+        "prediction_outside_unit_interval": 0,
+        "validation_direction_MSE": 3.743477104877299e-05
+      }
+    ],
+    "tuning": [
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00018263928728326438,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 1.4316733967710878e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 9.264126353048678e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.3528044372438656e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 9.489841590335778e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00018263928728326438,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 1.4316733967710878e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 9.264126353048678e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.3528044372438656e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 9.489841590335778e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00018263928728326438,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 1.3883768686691397e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 1.2220528095652404e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 9.815778126801806e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 1.110096020395208e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00018263928728326438,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 1.3049074219772255e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 8.70032576975855e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.1432822695199801e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 8.31848078126707e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.0001780987155606349,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 2.9097984486442823e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 9.867733531750487e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 9.812759535052408e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 1.6281111352815998e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00017174590243742785,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 3.744147953269674e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 8.529482151849512e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.0563464465000938e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 9.124070843586219e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.0001848904075521045,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 2.7841543996102034e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 1.189739097949645e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 7.9058206142496e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 8.84055444271112e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.0001684840342054625,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 2.2502794081050233e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 8.623075522412665e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.0853455033574682e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 1.0701290742648217e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00018263928728326438,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 1.4316733967710878e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 9.264126353048678e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.3528044372438656e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 9.489841590335778e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00018263928728326438,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 1.4316733967710878e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 9.264126353048678e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.3528044372438656e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 9.489841590335778e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00018263928728326438,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 1.4316733967710878e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 9.264126353048678e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.3528044372438656e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 9.489841590335778e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00018263928728326438,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 1.4316733967710878e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 9.264126353048678e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.3528044372438656e-05,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 9.489841590335778e-06,
+        "converged": true,
+        "active_nonlinearity": false
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00016306302040412936,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 2.673683672998696e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 2.435759261894272e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 2.2504990802036e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 5.739143880491025e-07,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.0001630637565503162,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 2.136646073867621e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 1.5640674824411201e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.6375733446869833e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 4.643451470093798e-07,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.0001356008232745545,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 3.270523446966069e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 7.322448348225111e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 2.6787669427066805e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 3.974534649149475e-07,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "validation_direction_MSE": 0.00017324136439487655,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "validation_direction_MSE": 6.785125905155006e-07,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "validation_direction_MSE": 1.2172139139736042e-06,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "validation_direction_MSE": 1.1897063469932397e-05,
+        "converged": true,
+        "active_nonlinearity": true
+      },
+      {
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "validation_direction_MSE": 1.397008745668615e-07,
+        "converged": true,
+        "active_nonlinearity": true
+      }
+    ],
+    "optimizer": [
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.003173483999936644,
+        "gradient_inf": 9.627127775387861e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.003173483999939483,
+        "gradient_inf": 1.4137351733133777e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.0031734839999355263,
+        "gradient_inf": 2.472068626209989e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009124817049132506,
+        "gradient_inf": 6.775845250674235e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009124817049058752,
+        "gradient_inf": 5.0758723339202004e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.00912481704915153,
+        "gradient_inf": 8.802444633829797e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.010420448126182123,
+        "gradient_inf": 9.998071529075272e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.010420448126182107,
+        "gradient_inf": 1.0355158993605968e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.010420448126181673,
+        "gradient_inf": 7.304202985549339e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009159835851772494,
+        "gradient_inf": 7.160254389629161e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009159835851719115,
+        "gradient_inf": 4.9508186921578845e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009159835851819054,
+        "gradient_inf": 8.075720088993651e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.00944706953384922,
+        "gradient_inf": 7.921456224852647e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009447069533849023,
+        "gradient_inf": 7.733531085091607e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009447069533968544,
+        "gradient_inf": 9.521622156291371e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.0031734839999692345,
+        "gradient_inf": 3.7386118885907385e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.0031734839999458305,
+        "gradient_inf": 2.1807250707728785e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.003173483999943245,
+        "gradient_inf": 1.8481760555820273e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009124817049064383,
+        "gradient_inf": 1.7859784219202372e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009124817049060067,
+        "gradient_inf": 8.343227085725533e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009124817049064406,
+        "gradient_inf": 1.9973794852969194e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.01042044812619204,
+        "gradient_inf": 2.2435940235408267e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.010420448126188411,
+        "gradient_inf": 2.4354770626296417e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.010420448126202629,
+        "gradient_inf": 3.296757192996989e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009159835851723514,
+        "gradient_inf": 1.3751759628252947e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009159835851720621,
+        "gradient_inf": 1.0794891230314259e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009159835851904845,
+        "gradient_inf": 9.864416669555274e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009447069533854323,
+        "gradient_inf": 1.481560708887448e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009447069533852928,
+        "gradient_inf": 1.8768951627892436e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009447069533861534,
+        "gradient_inf": 2.4497308950379083e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 13,
+        "objective": 0.003173484001011241,
+        "gradient_inf": 5.3837920450198696e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 15,
+        "objective": 0.003173484001237401,
+        "gradient_inf": 6.347106284374928e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 12,
+        "objective": 0.0031734840007025316,
+        "gradient_inf": 6.778832675857122e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 18,
+        "objective": 0.008392681610656465,
+        "gradient_inf": 9.564006905480331e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 16,
+        "objective": 0.008392681610052601,
+        "gradient_inf": 4.576192286731739e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 19,
+        "objective": 0.00839268160954319,
+        "gradient_inf": 7.777475468464605e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 20,
+        "objective": 0.009285112457634154,
+        "gradient_inf": 4.5145828998849525e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 16,
+        "objective": 0.009285112457493598,
+        "gradient_inf": 2.7903166156285694e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 20,
+        "objective": 0.009285112457799644,
+        "gradient_inf": 7.070854334608282e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 18,
+        "objective": 0.008459111518882118,
+        "gradient_inf": 5.679011753887309e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 16,
+        "objective": 0.00845911151857722,
+        "gradient_inf": 3.421295946525783e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 17,
+        "objective": 0.008459111519547076,
+        "gradient_inf": 5.8678523621876954e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 21,
+        "objective": 0.008574260491742175,
+        "gradient_inf": 3.124425204362144e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 15,
+        "objective": 0.00857426049320506,
+        "gradient_inf": 7.739817721924848e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 19,
+        "objective": 0.008574260491819422,
+        "gradient_inf": 2.3598755420592476e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 18,
+        "objective": 0.003173484000108181,
+        "gradient_inf": 2.414319158520801e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 17,
+        "objective": 0.0031734840034108626,
+        "gradient_inf": 7.089167903446527e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 17,
+        "objective": 0.003173484000141394,
+        "gradient_inf": 1.740464503961763e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 18,
+        "objective": 0.0083102564333398,
+        "gradient_inf": 9.631731220016334e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 19,
+        "objective": 0.008310256431928625,
+        "gradient_inf": 4.712556801563857e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 20,
+        "objective": 0.008310256432083989,
+        "gradient_inf": 4.158642532529295e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 18,
+        "objective": 0.009137344638785117,
+        "gradient_inf": 2.6082114992163177e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 18,
+        "objective": 0.009137344639438473,
+        "gradient_inf": 4.342456179086203e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 19,
+        "objective": 0.009137344639199452,
+        "gradient_inf": 4.254494509592106e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 17,
+        "objective": 0.008352318250004293,
+        "gradient_inf": 5.276303724011377e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 19,
+        "objective": 0.008352318249459326,
+        "gradient_inf": 4.706515958137271e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 20,
+        "objective": 0.008352318249365075,
+        "gradient_inf": 3.747951823698657e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 16,
+        "objective": 0.008465225221845691,
+        "gradient_inf": 7.053975115709013e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 18,
+        "objective": 0.008465225222311351,
+        "gradient_inf": 7.234248518280452e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 19,
+        "objective": 0.008465225221613101,
+        "gradient_inf": 3.653077393448235e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 24,
+        "objective": 0.0007211739117434924,
+        "gradient_inf": 8.157286465640953e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 26,
+        "objective": 0.0016006375517431614,
+        "gradient_inf": 3.77032575395417e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 23,
+        "objective": 0.0007211739112417492,
+        "gradient_inf": 6.587311730563284e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 37,
+        "objective": 0.0016287335486832345,
+        "gradient_inf": 9.239433688385265e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 36,
+        "objective": 0.0022670973471667017,
+        "gradient_inf": 5.984404985398145e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 34,
+        "objective": 0.0016287335446224032,
+        "gradient_inf": 8.886255517465442e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 35,
+        "objective": 0.0017500319415243814,
+        "gradient_inf": 8.842143344366711e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 36,
+        "objective": 0.002358597117318145,
+        "gradient_inf": 8.239713305703218e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 35,
+        "objective": 0.00175003193744952,
+        "gradient_inf": 7.965683062105323e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 33,
+        "objective": 0.0016203828471885663,
+        "gradient_inf": 8.062556944410855e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 36,
+        "objective": 0.002212349688778226,
+        "gradient_inf": 1.3552263324269253e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 34,
+        "objective": 0.001620382842601532,
+        "gradient_inf": 4.3122630429722885e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 32,
+        "objective": 0.0016755098020678153,
+        "gradient_inf": 9.616721570620344e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 40,
+        "objective": 0.0022570294563596556,
+        "gradient_inf": 4.3911785235645907e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 36,
+        "objective": 0.0016755097971135765,
+        "gradient_inf": 1.1866708967435181e-07,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 37,
+        "objective": 0.0007082331111690108,
+        "gradient_inf": 4.567246380436327e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 35,
+        "objective": 0.0007082331347962092,
+        "gradient_inf": 9.122508493132445e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 40,
+        "objective": 0.0007082331119737312,
+        "gradient_inf": 4.0647567334530784e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 64,
+        "objective": 0.0013533120256086864,
+        "gradient_inf": 8.830380633147133e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 46,
+        "objective": 0.0013533120126988422,
+        "gradient_inf": 6.81877177085379e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 65,
+        "objective": 0.0013533120156909095,
+        "gradient_inf": 6.394925869225987e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 57,
+        "objective": 0.001413903284261502,
+        "gradient_inf": 8.195482343982948e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 49,
+        "objective": 0.0014139032899744526,
+        "gradient_inf": 8.375891198799392e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 63,
+        "objective": 0.0014139032788477387,
+        "gradient_inf": 6.591831503540093e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 43,
+        "objective": 0.0013359881040732034,
+        "gradient_inf": 7.240975665767767e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 43,
+        "objective": 0.0013359880938180132,
+        "gradient_inf": 8.236322408750438e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 57,
+        "objective": 0.0013359880933823559,
+        "gradient_inf": 8.535261986900841e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 80,
+        "objective": 0.0013424889982568404,
+        "gradient_inf": 9.690959685093682e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 46,
+        "objective": 0.0013424890043876802,
+        "gradient_inf": 6.934731541813658e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 62,
+        "objective": 0.0013424890013677504,
+        "gradient_inf": 8.235159828568005e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 53,
+        "objective": 8.771105354726618e-05,
+        "gradient_inf": 8.872222238086955e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 116,
+        "objective": 0.0002754817399704576,
+        "gradient_inf": 8.086557488860327e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 54,
+        "objective": 8.771103634562379e-05,
+        "gradient_inf": 4.4482360832491645e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 76,
+        "objective": 0.0002744603036084677,
+        "gradient_inf": 9.182426977822133e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 84,
+        "objective": 0.0010499176987383576,
+        "gradient_inf": 5.075884685863013e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 69,
+        "objective": 0.0002744603133168378,
+        "gradient_inf": 9.995826454194505e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 71,
+        "objective": 0.00028958277309602863,
+        "gradient_inf": 7.833029601987633e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 98,
+        "objective": 0.0008863685867850138,
+        "gradient_inf": 6.084535080595383e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 69,
+        "objective": 0.00028958273838989933,
+        "gradient_inf": 5.821925089396379e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 65,
+        "objective": 0.0002670481864134926,
+        "gradient_inf": 7.728337212293896e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 106,
+        "objective": 0.0008272095719566784,
+        "gradient_inf": 5.9458018485406347e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 73,
+        "objective": 0.00031882740185034715,
+        "gradient_inf": 9.993906887588343e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 92,
+        "objective": 0.00030178029167457325,
+        "gradient_inf": 5.2768452297065094e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 83,
+        "objective": 0.0008286675710834227,
+        "gradient_inf": 9.66043593030637e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 1,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 86,
+        "objective": 0.00030178029208010015,
+        "gradient_inf": 4.7976683463651874e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 86,
+        "objective": 7.661304358784576e-05,
+        "gradient_inf": 5.312566551332738e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 89,
+        "objective": 7.661302274809978e-05,
+        "gradient_inf": 7.842757050110413e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 118,
+        "objective": 7.661304219183525e-05,
+        "gradient_inf": 8.717678751822979e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 200,
+        "objective": 0.00014220448412653825,
+        "gradient_inf": 5.8244031709230264e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 125,
+        "objective": 0.00014220441305138806,
+        "gradient_inf": 8.568824252857197e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 200,
+        "objective": 0.00017375435499634103,
+        "gradient_inf": 4.169906228730125e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 140,
+        "objective": 0.00014764518347315308,
+        "gradient_inf": 9.289310505866564e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 122,
+        "objective": 0.00014764510345453185,
+        "gradient_inf": 9.188022177914132e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 119,
+        "objective": 0.00018027106800012923,
+        "gradient_inf": 6.885774106303064e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 116,
+        "objective": 0.00013987860446557142,
+        "gradient_inf": 7.31240690807695e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 104,
+        "objective": 0.0001398786576234562,
+        "gradient_inf": 7.372896367804589e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 110,
+        "objective": 0.0001707127262529061,
+        "gradient_inf": 8.483267188512141e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 129,
+        "objective": 0.0001453578899122428,
+        "gradient_inf": 7.294791579330502e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 127,
+        "objective": 0.00014086832709357328,
+        "gradient_inf": 9.567588040632086e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 101,
+        "objective": 0.00017003122290226136,
+        "gradient_inf": 7.689092029653161e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "outer",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 168,
+        "objective": 0.0001431546615870057,
+        "gradient_inf": 5.789010871460766e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "outer",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 109,
+        "objective": 0.0001431546105209578,
+        "gradient_inf": 6.3756031944334e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "outer",
+        "model": "M2_bilinear",
+        "hyperparameters": {
+          "rank": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 114,
+        "objective": 0.00017564689932950538,
+        "gradient_inf": 6.637840069128144e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.00317348399993945,
+        "gradient_inf": 1.252059023662813e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.003173483999942212,
+        "gradient_inf": 1.51427727935233e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.0031734839999371547,
+        "gradient_inf": 8.830765232538757e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009124817049058313,
+        "gradient_inf": 2.086338446950299e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.009124817049083078,
+        "gradient_inf": 4.4623659551836556e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.009124817049061682,
+        "gradient_inf": 1.1770008838795322e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.010420448126180521,
+        "gradient_inf": 3.171796423781593e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.010420448126203364,
+        "gradient_inf": 4.252999839736634e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.010420448126191086,
+        "gradient_inf": 2.0418229618862396e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009159835851718808,
+        "gradient_inf": 2.1389002456571978e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.009159835851743927,
+        "gradient_inf": 4.338057050908344e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.009159835851728462,
+        "gradient_inf": 1.9619616780922932e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009447069533848178,
+        "gradient_inf": 2.456250058605878e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.009447069533873259,
+        "gradient_inf": 4.5343105246251035e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.009447069533859893,
+        "gradient_inf": 2.1623018613058952e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.0031734839999354022,
+        "gradient_inf": 1.366551222245522e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.00317348399993538,
+        "gradient_inf": 6.196032393393542e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.00317348399999737,
+        "gradient_inf": 5.7248830412270104e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009124817049058282,
+        "gradient_inf": 6.397285840692829e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009124817049058279,
+        "gradient_inf": 5.50795585060705e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009124817049058284,
+        "gradient_inf": 5.549346253642378e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.010420448126180478,
+        "gradient_inf": 1.867561119730703e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.01042044812618044,
+        "gradient_inf": 7.261234520623087e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.010420448126180443,
+        "gradient_inf": 6.41965138485501e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009159835851718798,
+        "gradient_inf": 1.511515978155985e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009159835851718779,
+        "gradient_inf": 6.734924422169244e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009159835851718772,
+        "gradient_inf": 5.381672610665078e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 4,
+        "objective": 0.009447069534410787,
+        "gradient_inf": 9.910044771943448e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009447069533848136,
+        "gradient_inf": 6.754442227233951e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.1
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009447069533848138,
+        "gradient_inf": 6.198673886940726e-10,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.003173483999938467,
+        "gradient_inf": 4.3422893416221176e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.003173484000046849,
+        "gradient_inf": 2.4830391304164714e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.003173484000372304,
+        "gradient_inf": 2.8562555686536532e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.00912481704909362,
+        "gradient_inf": 1.4989552954749505e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009124817049254996,
+        "gradient_inf": 2.5612812125416954e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 5,
+        "objective": 0.009124817049724836,
+        "gradient_inf": 3.781328450196492e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.010420448126461973,
+        "gradient_inf": 2.5177264971585836e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.010420448126734067,
+        "gradient_inf": 4.572299214805585e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.010420448126189075,
+        "gradient_inf": 7.412282938546952e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.009159835851802642,
+        "gradient_inf": 1.8669084605104347e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009159835851870529,
+        "gradient_inf": 2.3892414328859694e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009159835851726939,
+        "gradient_inf": 6.7107622328904895e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.00944706953406539,
+        "gradient_inf": 2.536500757952169e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009447069534329965,
+        "gradient_inf": 4.284157377490621e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009447069533861506,
+        "gradient_inf": 1.0279424770686683e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.003173484002171234,
+        "gradient_inf": 7.20889442586651e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.003173483999942042,
+        "gradient_inf": 5.775561012325135e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.0031734839999549053,
+        "gradient_inf": 8.73153559397722e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.009124817049062553,
+        "gradient_inf": 5.118267570310733e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009124817051056604,
+        "gradient_inf": 7.294453821207486e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009124817050252268,
+        "gradient_inf": 7.215029944163013e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.010420448126279286,
+        "gradient_inf": 1.387100048121644e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.010420448127566461,
+        "gradient_inf": 4.69431319560104e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.010420448126182865,
+        "gradient_inf": 3.905968951907259e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.009159835851770295,
+        "gradient_inf": 8.809096221869375e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009159835853369644,
+        "gradient_inf": 9.646271771497514e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009159835852647503,
+        "gradient_inf": 6.465174552632905e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 7,
+        "objective": 0.009447069533865506,
+        "gradient_inf": 5.2986233645155175e-09,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009447069535183922,
+        "gradient_inf": 7.401143006031204e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.01
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 6,
+        "objective": 0.009447069534958566,
+        "gradient_inf": 6.792482591257643e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 24,
+        "objective": 0.001853681236619828,
+        "gradient_inf": 6.789444264600469e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 33,
+        "objective": 0.002461821197619113,
+        "gradient_inf": 4.33912986470136e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 23,
+        "objective": 0.0017622479526990201,
+        "gradient_inf": 2.410520230799085e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 37,
+        "objective": 0.0035253136805137135,
+        "gradient_inf": 6.570310080048836e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 50,
+        "objective": 0.004320167557042081,
+        "gradient_inf": 6.284850230064802e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 38,
+        "objective": 0.0034430656061796554,
+        "gradient_inf": 3.128052878278011e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 36,
+        "objective": 0.0036866084043127405,
+        "gradient_inf": 6.451682201197642e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 47,
+        "objective": 0.004344724769253753,
+        "gradient_inf": 8.255079708458131e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 37,
+        "objective": 0.003649459545923328,
+        "gradient_inf": 5.93202643334782e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 43,
+        "objective": 0.0032951818142740105,
+        "gradient_inf": 7.015735343507548e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 48,
+        "objective": 0.004135524697815776,
+        "gradient_inf": 8.353131692562894e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 35,
+        "objective": 0.0035204732882643313,
+        "gradient_inf": 5.432028701542538e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 37,
+        "objective": 0.003488729141785161,
+        "gradient_inf": 5.845544373333719e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 56,
+        "objective": 0.004062820556928997,
+        "gradient_inf": 5.7783840269373774e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 55,
+        "objective": 0.003336809898679755,
+        "gradient_inf": 9.645264593026654e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 32,
+        "objective": 0.0017658581241678148,
+        "gradient_inf": 6.720632450053256e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 20,
+        "objective": 0.001762247960196709,
+        "gradient_inf": 6.884773439365753e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 21,
+        "objective": 0.001828200970442543,
+        "gradient_inf": 6.140117173990961e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 33,
+        "objective": 0.003132263810627146,
+        "gradient_inf": 7.457678896932859e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 40,
+        "objective": 0.003640883575505655,
+        "gradient_inf": 4.775136982791613e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 39,
+        "objective": 0.003421491099353927,
+        "gradient_inf": 8.529388982429775e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 33,
+        "objective": 0.0032349916910808943,
+        "gradient_inf": 8.659132776633329e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 35,
+        "objective": 0.003771761543568183,
+        "gradient_inf": 9.144867707917975e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 40,
+        "objective": 0.003534685870213163,
+        "gradient_inf": 5.80155066244592e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 34,
+        "objective": 0.0031178126829640635,
+        "gradient_inf": 6.135061806296946e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 33,
+        "objective": 0.0036179341808760916,
+        "gradient_inf": 8.753367720237956e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 38,
+        "objective": 0.003404179344464345,
+        "gradient_inf": 9.822672536330813e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 34,
+        "objective": 0.003009231508404836,
+        "gradient_inf": 5.603878375058527e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 36,
+        "objective": 0.0036113128689411206,
+        "gradient_inf": 2.7672684306686256e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 40,
+        "objective": 0.003410436624025459,
+        "gradient_inf": 6.890807076461933e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 157,
+        "objective": 0.0003175050599944004,
+        "gradient_inf": 7.072356275954433e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 100,
+        "objective": 0.00035961481186785427,
+        "gradient_inf": 9.031372108245857e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 115,
+        "objective": 0.0002717408519110045,
+        "gradient_inf": 7.361011459024525e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 210,
+        "objective": 0.0003782354959060946,
+        "gradient_inf": 7.022368528178163e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 315,
+        "objective": 0.0003719936436482925,
+        "gradient_inf": 6.289342578771103e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 120,
+        "objective": 0.00042574587102704785,
+        "gradient_inf": 9.419334425774988e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 206,
+        "objective": 0.0003606995644654743,
+        "gradient_inf": 9.22312083213146e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 202,
+        "objective": 0.00045153046577504045,
+        "gradient_inf": 8.191791396719482e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 119,
+        "objective": 0.0003846741839170705,
+        "gradient_inf": 7.814046425258308e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 194,
+        "objective": 0.00036522421680121867,
+        "gradient_inf": 6.024984013632765e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 327,
+        "objective": 0.0004315230157165502,
+        "gradient_inf": 9.654144002642512e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 97,
+        "objective": 0.0003681559074285411,
+        "gradient_inf": 9.945248196107318e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 202,
+        "objective": 0.0003689754617744433,
+        "gradient_inf": 9.486155537667229e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 202,
+        "objective": 0.00043588355058283353,
+        "gradient_inf": 8.482249145412822e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 2,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 128,
+        "objective": 0.0003691054845429794,
+        "gradient_inf": 6.067390638749736e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 97,
+        "objective": 0.00021617617378075985,
+        "gradient_inf": 5.7868906065154175e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 84,
+        "objective": 0.0002545290612733654,
+        "gradient_inf": 6.894652885011752e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "asm_Beng__kan_Knda",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 175,
+        "objective": 0.0002118759861069697,
+        "gradient_inf": 8.725287883279724e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 146,
+        "objective": 0.0003836967335931362,
+        "gradient_inf": 8.05086700027552e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 153,
+        "objective": 0.00041939129407789026,
+        "gradient_inf": 8.594456554806174e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "ben_Beng__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 215,
+        "objective": 0.0003805615134171938,
+        "gradient_inf": 6.204018891926208e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 171,
+        "objective": 0.00038126931591541806,
+        "gradient_inf": 7.607655133322886e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 140,
+        "objective": 0.00042865974517605537,
+        "gradient_inf": 7.002003768059851e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "guj_Gujr__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 152,
+        "objective": 0.00045331944776026814,
+        "gradient_inf": 9.944399448627778e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 155,
+        "objective": 0.00036641495440603637,
+        "gradient_inf": 8.454807973747285e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 141,
+        "objective": 0.0004148991777408658,
+        "gradient_inf": 9.60772385488579e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "kan_Knda__mar_Deva",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 235,
+        "objective": 0.0003797921676828287,
+        "gradient_inf": 7.385922596515513e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 143,
+        "objective": 0.00034871968590392225,
+        "gradient_inf": 5.641913205363619e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 142,
+        "objective": 0.0004118240135659955,
+        "gradient_inf": 6.914130840784491e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "inner",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "pan_Guru__tam_Taml",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 259,
+        "objective": 0.0003753610325259322,
+        "gradient_inf": 9.101346439491914e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "outer",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "",
+        "seed": 20261118,
+        "success": true,
+        "finite": true,
+        "iterations": 130,
+        "objective": 0.0003725051299006623,
+        "gradient_inf": 7.568057141313768e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "outer",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "",
+        "seed": 20261119,
+        "success": true,
+        "finite": true,
+        "iterations": 136,
+        "objective": 0.00042177369167843004,
+        "gradient_inf": 9.567439068808409e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      },
+      {
+        "phase": "outer",
+        "model": "M3_tanh",
+        "hyperparameters": {
+          "hidden": 4,
+          "penalty": 0.0001
+        },
+        "inner_dyad": "",
+        "seed": 20261120,
+        "success": true,
+        "finite": true,
+        "iterations": 183,
+        "objective": 0.0003831362221587247,
+        "gradient_inf": 6.685676818753313e-08,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+      }
+    ]
+  },
+  "payload_hash": "764b22910ceb57e8296fdac758e4874e6f7449b253bae5d4917c492abe542547"
+}

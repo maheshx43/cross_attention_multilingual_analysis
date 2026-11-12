@@ -1,0 +1,55 @@
+{
+  "e4_root": "/content/drive/MyDrive/indic_40_enhancements/E4_mask_sensitivity_fp32_v3",
+  "output": "/content/drive/MyDrive/indic_40_enhancements/E5_fp32_head_analysis_v1",
+  "cache": "/content/e5_verified_head_cache",
+  "source_sha256": "6afa85510b17bb93c642cf9fe98a3918c4f3927b3dcbbbbad08e01502d813386",
+  "expected_e4_sources": {
+    "e1_core.py": "43bd0136cd01cbc3fba8d61e756c76fe5ae0ed437bbc816f2770a981d7a66122",
+    "e3_analysis.py": "ca2ee05f075182719df0fbbd3ec28f466e0c2237a8ed3a7d451d693bf06f0c05",
+    "e3_worker.py": "4629e13522fc103b3fd55dff2048714adafa57b7a8b6c502ce5b5ba8d69e39b0",
+    "e4_analysis.py": "f711c39ab55ea09d281ef7bd992f6bf9df2e1a369b21682db6cb8d717b0400c7",
+    "e4_masks.py": "23e6069101916ff35132f4932c8b932ec0984707b2addf1b0d984d0d3ec804c6",
+    "e4_worker.py": "fbd89aac88ef2af44807c308c1bf5daf8aa39d8dd38cad0fadcb5946cc1ef024",
+    "original_adapter.py": "415fdfb8f4f46dfe6ebf509a39b01943a3e0ea415e20db6dc1b86583214dd408"
+  },
+  "expected_split_identity": "6978ca5ae1ff972acd9b2ef83749f03bbf72f593863093b51ecb8eb3d064b779",
+  "n_boot": 10000,
+  "bootstrap_chunk": 128,
+  "top_fraction": 0.1,
+  "selection_seed": 20261110,
+  "bootstrap_seed": 20261111,
+  "protocol": {
+    "stage": "E5A",
+    "version": "1.0",
+    "models": [
+      "it2",
+      "nllb",
+      "madlad"
+    ],
+    "input": "completed E4 deterministic v3 fp32 per-head component shares only",
+    "split": "unchanged E1 train315 / validation67 / test68; baseline450 only",
+    "prediction": "remove both dyad directions; source+target OLS versus source-only; test68",
+    "bootstrap_repetitions": 10000,
+    "bootstrap_unit": "joint whole meanings across all directions/heads",
+    "prediction_intervals": "test-meaning bootstrap conditional on fixed training fits",
+    "effect_intervals": "training-meaning resampling and OLS refit; nominal per-head intervals",
+    "null": "centered training-meaning cluster multiplier for beta vector=0; conditional on graph",
+    "multiplicity": "BY primary, BH secondary; one family over all three models and all heads",
+    "selection": "train beta RMS only; top 10%, at most half the heads per layer; 3 disjoint-from-top layer-matched random sets",
+    "selection_seed": 20261110,
+    "bootstrap_seed": 20261111,
+    "inference_limit": "fixed languages/graph; descriptive target effects, not causal/behavioral importance",
+    "GPU_ablation_completed": false,
+    "new_quality_scores_computed": false
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "matplotlib": "3.9.4"
+  },
+  "e4_complete_sha256": {
+    "it2": "3a02a1193299a73e5ef610072c2e27d9dad62e5289e21f17b745d7e61cc448c6",
+    "nllb": "550fb4c92e3b9bb30efaf74fba00097d1ec35421cd38c302e9c1ca370b3c48bf",
+    "madlad": "af3b5735acf88909c506b40927339445d2a05b7fdb44050e9cefbb1b04dbc84e"
+  }
+}

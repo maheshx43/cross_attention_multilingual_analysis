@@ -1,5 +1,11 @@
 # Reproduction details
 
+Saved numerical results and split manifests are also deposited in this repository:
+[results](../results/README.md), [split index](../manifests/SPLITS.json),
+[paper-table sources](../manifests/PAPER_TABLE_SOURCES.json) and
+[release scope](RELEASE_SCOPE.md). Original source archives remain linked below.
+
+
 For the added E1–E8 experiments and the revised-paper table map, see
 [VALIDATION_EXPERIMENTS.md](VALIDATION_EXPERIMENTS.md) and
 [REVISED_MANUSCRIPT_MAP.md](REVISED_MANUSCRIPT_MAP.md). This guide retains

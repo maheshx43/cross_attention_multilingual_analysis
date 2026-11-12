@@ -1,0 +1,24 @@
+{
+  "stage": "E5A",
+  "version": "1.0",
+  "models": [
+    "it2",
+    "nllb",
+    "madlad"
+  ],
+  "input": "completed E4 deterministic v3 fp32 per-head component shares only",
+  "split": "unchanged E1 train315 / validation67 / test68; baseline450 only",
+  "prediction": "remove both dyad directions; source+target OLS versus source-only; test68",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_unit": "joint whole meanings across all directions/heads",
+  "prediction_intervals": "test-meaning bootstrap conditional on fixed training fits",
+  "effect_intervals": "training-meaning resampling and OLS refit; nominal per-head intervals",
+  "null": "centered training-meaning cluster multiplier for beta vector=0; conditional on graph",
+  "multiplicity": "BY primary, BH secondary; one family over all three models and all heads",
+  "selection": "train beta RMS only; top 10%, at most half the heads per layer; 3 disjoint-from-top layer-matched random sets",
+  "selection_seed": 20261110,
+  "bootstrap_seed": 20261111,
+  "inference_limit": "fixed languages/graph; descriptive target effects, not causal/behavioral importance",
+  "GPU_ablation_completed": false,
+  "new_quality_scores_computed": false
+}

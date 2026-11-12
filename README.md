@@ -6,7 +6,7 @@ in Multilingual Indic Neural Machine Translation**.
 This repository contains **37 Python exports of notebook code cells** (the
 original 28 and nine completed E1–E8 validation notebooks), plus **one executed
 CPU summary of saved predictions** used for the target-only comparison in
-revised Table 8. No `.ipynb` files or notebook outputs are published here.
+revised Table 8.
 
 The calculations, configurations, assertions, paths and cell order are retained.
 IPython `%pip` and `%%writefile` syntax is represented by equivalent IPython
@@ -31,6 +31,8 @@ docs/
   REPRODUCIBILITY.md
   VALIDATION_EXPERIMENTS.md
   REVISED_MANUSCRIPT_MAP.md
+results/          # saved numerical tables, JSON summaries and predictions
+manifests/        # frozen splits, result hashes and paper-table source map
 SOURCE_PROVENANCE.json
 SHA256SUMS.txt
 ```
@@ -69,17 +71,23 @@ strict generalization split is 315 / 67 / 68 within the 450 baseline block.
 E6/E7 use 444 complete matched meanings with retained 309 / 67 / 68 partitions.
 NLLB exclusions are preserved as coded; missing attention is never zero-filled.
 
-Saved outputs are maintained separately on Drive:
+Saved split definitions, numerical summaries and prediction files are now
+deposited in [results/](results/README.md) and [manifests/](manifests/SPLITS.json).
+[Paper-table provenance](manifests/PAPER_TABLE_SOURCES.json) connects revised
+Tables 5–17 to the deposited files and hashes. Larger files use lossless gzip.
+
+The original source/result archives and additional upstream inputs remain on Drive:
 
 - [E1–E8 completed result archives](https://drive.google.com/drive/folders/1oAxnr1y1DwMfzvNGEqFijLGiymKFm8OI)
 - [Original fp32 baseline and crossed intervention outputs](https://drive.google.com/drive/folders/1IzgV6eRs7nqCU_Ffr9Baoc5aMARrhSHf)
 - [Original additive/LOLO outputs](https://drive.google.com/drive/folders/1aLYAwzlTwI0qGwTX1T-UYE_YShLpqYy1)
 
-Full CSVs in those archives are the numerical evidence; notebook displays may
-truncate tables. Drive permissions and the original directory structure are
-required for reproduction. This repository contains source and source hashes,
-not the numerical archives, corpus strings, model weights or raw attention
-tensors. See the [reproduction guide](docs/REPRODUCIBILITY.md) for other inputs.
+The deposited CSV/JSON files are the numerical evidence; notebook displays may
+truncate tables. GitHub verification of these deposited values does not require
+Drive access. Full recollection still needs original upstream inputs, model and
+corpus access, and the directory structure documented by the scripts. Raw
+attention tensors, model weights and corpus strings are excluded. See the
+[reproduction guide](docs/REPRODUCIBILITY.md) for other inputs.
 
 ## Revised-paper coverage
 
@@ -91,7 +99,6 @@ only for MADLAD; E7 finds no reliable gain from the tested flexible models.
 E8 has 39/42 nonzero interaction intervals per model (78/84 overall), adjusted
 jointly across all 84 cells.
 
-This remains a Python-source-only release. A matching availability statement
-should describe **Python source exports of the collection and analysis
-notebooks, with saved numerical outputs linked separately**; it should not
-state that notebooks or all numerical outputs are stored directly in GitHub.
+The [release scope](docs/RELEASE_SCOPE.md) records the deposited material,
+verification procedure and items deferred by the authors. Classifier prediction
+files have not been located or verified; no such file is claimed here.

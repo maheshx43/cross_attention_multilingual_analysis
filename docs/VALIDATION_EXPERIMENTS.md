@@ -1,5 +1,11 @@
 # Completed validation experiments
 
+Saved numerical results and split manifests are also deposited in this repository:
+[results](../results/README.md), [split index](../manifests/SPLITS.json),
+[paper-table sources](../manifests/PAPER_TABLE_SOURCES.json) and
+[release scope](RELEASE_SCOPE.md). Original source archives remain linked below.
+
+
 These exports come from the completed Colab notebooks, rather than the earlier
 unexecuted development copies. E5 has two notebooks, making nine E1–E8 exports.
 Notebook markdown and outputs are intentionally excluded. Code-generated

@@ -1,0 +1,44 @@
+{
+  "experiment": "E8_CPU_extension",
+  "version": "1.0",
+  "configuration": {
+    "input": "/content/drive/MyDrive/fp32_tag_intervention",
+    "output": "/content/drive/MyDrive/indic_40_enhancements/E8_crossed_tag_text_cpu_v1/analysis",
+    "n_boot": 10000,
+    "seed": 20261122,
+    "source_sha256": "0864d4ced0c458dfa5819e9fd14bb46ff50600c8db84168f21fe149fd3194975",
+    "expected_locks": {
+      "it2": "2f0b207772261183f5e20557435e2277e1f50db6c210a96e2c29fbaaf95b2932",
+      "nllb": "f9386d36b1776b9af1a1edd74b3ce66f846108629b8a73f3d3e034912988bcb3"
+    },
+    "expected_analyses": {
+      "it2": {
+        "baseline_analysis.json": "9d94bb25fae86ac853a2e68db041f1fb2518fb696d317a2e28d2242839085213",
+        "intervention_analysis.json": "1b261a37575c38854749e4e490f523567c49be44c4da64a8812f01c2fa99d5fa"
+      },
+      "nllb": {
+        "baseline_analysis.json": "75ecce233ace98123abe43d468c304ca4d17968709da7607f267816e921af38e",
+        "intervention_analysis.json": "53e3b4ac1846043d14fcd25eb996de8656110027578576cccbc340e664d4140b"
+      }
+    },
+    "expected_baseline_inventory": {
+      "it2": "6da3f7c1b72fac30e76b22931a7cc190f3ac2b3ca48934e93b8547ee7ed32045",
+      "nllb": "9816c7e349ff08a072f7c1ae9c1071e531445e0e0be31cae6492c472c23bc8e0"
+    },
+    "expected_split_identity": "5a224f7c1ccf791fdfca6fce530200b16c28b4bf8fcca26fffa3b6dc9faec61b"
+  },
+  "primary": "two model-level lexical tag_by_text interaction tests; centered meaning-cluster bootstrap",
+  "primary_grid": "original4sources x7tags x6texts; all300 frozen intervention meanings when complete",
+  "baseline": "original fp32 baseline450; coefficients and E1 historical CSV inventory verified",
+  "simultaneous_family": "all84 lexical interaction cells, both models, max standardized bootstrap deviation",
+  "sensitivities": [
+    "row-level NLL with meaning FE",
+    "within6targets",
+    "flagged mar/hin exclusion",
+    "all6 target deletions",
+    "all4 source deletions",
+    "control-versus-within absolute shift"
+  ],
+  "generation": "reuse original4200 scored outputs/model on150 frozen meanings; no new decoding",
+  "limits": "historical pre-E4v3 inputs; selected languages; off-distribution TF; coarse punctuation; no mediation claim"
+}

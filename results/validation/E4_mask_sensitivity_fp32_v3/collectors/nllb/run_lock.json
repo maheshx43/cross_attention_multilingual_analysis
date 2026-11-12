@@ -1,0 +1,64 @@
+{
+  "study": "nllb",
+  "model": {
+    "repo": "facebook/nllb-200-distilled-600M",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+  },
+  "seed": 20261107,
+  "worker_sha256": "fbd89aac88ef2af44807c308c1bf5daf8aa39d8dd38cad0fadcb5946cc1ef024",
+  "support_code_sha256": {
+    "e1_core.py": "43bd0136cd01cbc3fba8d61e756c76fe5ae0ed437bbc816f2770a981d7a66122",
+    "e3_worker.py": "4629e13522fc103b3fd55dff2048714adafa57b7a8b6c502ce5b5ba8d69e39b0",
+    "e3_analysis.py": "ca2ee05f075182719df0fbbd3ec28f466e0c2237a8ed3a7d451d693bf06f0c05",
+    "original_adapter.py": "415fdfb8f4f46dfe6ebf509a39b01943a3e0ea415e20db6dc1b86583214dd408",
+    "e4_masks.py": "23e6069101916ff35132f4932c8b932ec0984707b2addf1b0d984d0d3ec804c6",
+    "e4_worker.py": "fbd89aac88ef2af44807c308c1bf5daf8aa39d8dd38cad0fadcb5946cc1ef024",
+    "e4_analysis.py": "f711c39ab55ea09d281ef7bd992f6bf9df2e1a369b21682db6cb8d717b0400c7"
+  },
+  "baseline_sha256": "23c31d32a34e2d74eb8bf0cc9b4a1fe15feb620bd60bab146b189ce0727c1dcc",
+  "manifest_sha256": "387f45769d15316387fae2e912ddb98564ab5896a98a2b2ba67241178b07b605",
+  "precision": "fp32",
+  "attention": "eager",
+  "tf32": false,
+  "batch_size": 4,
+  "batch_policy": "original groups of four sorted baseline meanings within each direction for IT2/NLLB; E3 single-row batches for MADLAD",
+  "decoder_cache": "original model default for IT2/NLLB; disabled for MADLAD",
+  "python_hash_seed": 0,
+  "baseline_policy": "fresh same-forward raw/mask measurements; old baseline retained as a comparison",
+  "target_support": "exact original reference lexical-label rows, model-specific unknown handling retained",
+  "old_baseline_reporting_threshold": 0.0001,
+  "mask_protocol": {
+    "fine_partition": [
+      "source_tag",
+      "target_tag",
+      "source_code",
+      "eos",
+      "unknown",
+      "blank",
+      "punctuation_P",
+      "symbol_control",
+      "content"
+    ],
+    "blank": "strip SentencePiece/byte-BPE boundary markers and whitespace; empty remainder",
+    "separator_localization": "also save prefix blank mass before the first language-control position versus remaining body blanks; diagnostic subsets, not extra closure components",
+    "punctuation_P": "nonempty remainder consists entirely of Unicode category P characters",
+    "symbol_control": "remaining positions classified punctuation under original all-P/S/Z/C rule",
+    "content": "original lexical positions excluding unknown",
+    "raw_P_only": "original lexical mass + symbol/control mass; symbols treated as lexical under this alternative operational rule; blank remains nonlexical",
+    "conditional_original": "original lexical / (original lexical + original broad punctuation), excludes original controls",
+    "conditional_no_separator": "original lexical / (original lexical + pure punctuation + symbol/control), excludes blank separately",
+    "harmonized_unknown": "remove source unknown from numerator/denominator for all systems; original target support remains unchanged"
+  },
+  "tokenizer_padding_side": "right",
+  "gpu": "NVIDIA L4",
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.51.3",
+    "sentencepiece": "0.2.2",
+    "tokenizers": "0.21.1",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "datasets": "4.0.0",
+    "accelerate": "1.6.0"
+  }
+}

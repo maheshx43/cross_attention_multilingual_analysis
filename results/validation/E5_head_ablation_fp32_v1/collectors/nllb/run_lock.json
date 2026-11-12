@@ -1,0 +1,967 @@
+{
+  "study": "nllb",
+  "model": {
+    "repo": "facebook/nllb-200-distilled-600M",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+  },
+  "head_sets": {
+    "study": "nllb",
+    "model": {
+      "repo": "facebook/nllb-200-distilled-600M",
+      "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+    },
+    "layer_count": 12,
+    "heads_per_layer": 16,
+    "indexing": "zero-based decoder layer and cross-attention head; flat=layer*heads_per_layer+head",
+    "selection_metric": "train315 beta RMS, source+target OLS",
+    "selection_scope": "training meanings only; validation/test not used for selected head sets",
+    "selection_direction_scope": "all 40 observed training directions; future selected-head ablation is meaning-held-out, not a test of unseen-dyad head selection",
+    "split": {
+      "seed": 20261101,
+      "train": [
+        0,
+        2,
+        3,
+        4,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        26,
+        27,
+        30,
+        33,
+        42,
+        45,
+        47,
+        51,
+        54,
+        56,
+        57,
+        58,
+        63,
+        64,
+        65,
+        68,
+        70,
+        72,
+        73,
+        75,
+        78,
+        79,
+        80,
+        82,
+        83,
+        85,
+        89,
+        90,
+        91,
+        92,
+        94,
+        95,
+        96,
+        98,
+        100,
+        101,
+        102,
+        104,
+        108,
+        111,
+        112,
+        113,
+        121,
+        122,
+        124,
+        125,
+        126,
+        127,
+        128,
+        132,
+        133,
+        135,
+        136,
+        138,
+        142,
+        147,
+        150,
+        153,
+        154,
+        157,
+        158,
+        162,
+        163,
+        164,
+        166,
+        167,
+        168,
+        170,
+        172,
+        174,
+        175,
+        177,
+        178,
+        181,
+        186,
+        188,
+        195,
+        196,
+        197,
+        198,
+        199,
+        201,
+        203,
+        205,
+        206,
+        208,
+        211,
+        214,
+        218,
+        222,
+        225,
+        226,
+        228,
+        231,
+        235,
+        236,
+        237,
+        241,
+        243,
+        246,
+        248,
+        249,
+        251,
+        254,
+        255,
+        257,
+        259,
+        261,
+        263,
+        264,
+        266,
+        268,
+        271,
+        276,
+        278,
+        279,
+        283,
+        284,
+        285,
+        288,
+        290,
+        295,
+        299,
+        302,
+        303,
+        307,
+        309,
+        313,
+        314,
+        316,
+        318,
+        319,
+        321,
+        325,
+        327,
+        328,
+        330,
+        336,
+        337,
+        341,
+        342,
+        344,
+        346,
+        348,
+        352,
+        355,
+        357,
+        358,
+        359,
+        365,
+        366,
+        369,
+        370,
+        372,
+        376,
+        377,
+        386,
+        388,
+        389,
+        395,
+        398,
+        399,
+        400,
+        402,
+        403,
+        404,
+        409,
+        411,
+        412,
+        413,
+        415,
+        422,
+        427,
+        432,
+        433,
+        434,
+        437,
+        440,
+        441,
+        444,
+        448,
+        452,
+        456,
+        457,
+        459,
+        463,
+        467,
+        468,
+        470,
+        471,
+        472,
+        479,
+        484,
+        486,
+        490,
+        492,
+        495,
+        498,
+        502,
+        503,
+        508,
+        509,
+        510,
+        517,
+        520,
+        523,
+        525,
+        527,
+        528,
+        534,
+        535,
+        537,
+        542,
+        544,
+        546,
+        548,
+        551,
+        552,
+        555,
+        559,
+        561,
+        563,
+        564,
+        565,
+        568,
+        571,
+        575,
+        577,
+        579,
+        580,
+        582,
+        583,
+        584,
+        586,
+        588,
+        591,
+        592,
+        596,
+        605,
+        606,
+        608,
+        610,
+        612,
+        613,
+        615,
+        616,
+        618,
+        627,
+        628,
+        630,
+        632,
+        633,
+        634,
+        636,
+        637,
+        638,
+        639,
+        643,
+        645,
+        648,
+        651,
+        654,
+        656,
+        657,
+        658,
+        660,
+        661,
+        663,
+        667,
+        668,
+        669,
+        673,
+        677,
+        682,
+        683,
+        684,
+        685,
+        687,
+        689,
+        690,
+        692,
+        693,
+        696,
+        701,
+        702,
+        706,
+        707,
+        708,
+        710,
+        711,
+        712,
+        717,
+        718,
+        719,
+        722,
+        724,
+        728,
+        735,
+        739,
+        740,
+        743,
+        745
+      ],
+      "validation": [
+        5,
+        19,
+        28,
+        32,
+        52,
+        61,
+        69,
+        86,
+        120,
+        140,
+        151,
+        185,
+        219,
+        227,
+        252,
+        256,
+        269,
+        273,
+        298,
+        300,
+        323,
+        329,
+        331,
+        332,
+        345,
+        367,
+        374,
+        378,
+        380,
+        383,
+        393,
+        414,
+        428,
+        439,
+        442,
+        447,
+        475,
+        494,
+        512,
+        515,
+        530,
+        541,
+        549,
+        585,
+        603,
+        604,
+        622,
+        623,
+        631,
+        647,
+        650,
+        652,
+        655,
+        670,
+        674,
+        675,
+        676,
+        678,
+        697,
+        698,
+        705,
+        731,
+        733,
+        734,
+        737,
+        741,
+        748
+      ],
+      "test": [
+        8,
+        17,
+        24,
+        37,
+        40,
+        41,
+        49,
+        71,
+        77,
+        81,
+        87,
+        88,
+        93,
+        99,
+        106,
+        117,
+        130,
+        156,
+        165,
+        176,
+        190,
+        194,
+        200,
+        204,
+        207,
+        229,
+        232,
+        234,
+        245,
+        247,
+        253,
+        267,
+        274,
+        275,
+        281,
+        291,
+        305,
+        306,
+        315,
+        347,
+        351,
+        368,
+        375,
+        387,
+        391,
+        419,
+        426,
+        464,
+        474,
+        501,
+        511,
+        538,
+        595,
+        597,
+        621,
+        641,
+        649,
+        672,
+        681,
+        699,
+        703,
+        713,
+        723,
+        725,
+        726,
+        742,
+        746,
+        747
+      ],
+      "original_split_sha256": "9ed17cbd0b4b2edd97e79bf3cd074af5929ee6ea98552ad0965f58afdaef43ef",
+      "original_sample_hash": "64847ea1866cf6e728315df46e3743f8f69f94614cfde895f53f748ff9d7953c",
+      "scope": "450 original fp32 baseline meanings only"
+    },
+    "top_fraction": 0.1,
+    "per_layer_cap": 8,
+    "sets": {
+      "baseline": [],
+      "top_target_effect": [
+        {
+          "layer": 0,
+          "head": 15,
+          "flat_head": 15
+        },
+        {
+          "layer": 2,
+          "head": 6,
+          "flat_head": 38
+        },
+        {
+          "layer": 4,
+          "head": 2,
+          "flat_head": 66
+        },
+        {
+          "layer": 5,
+          "head": 12,
+          "flat_head": 92
+        },
+        {
+          "layer": 6,
+          "head": 13,
+          "flat_head": 109
+        },
+        {
+          "layer": 7,
+          "head": 1,
+          "flat_head": 113
+        },
+        {
+          "layer": 7,
+          "head": 14,
+          "flat_head": 126
+        },
+        {
+          "layer": 8,
+          "head": 4,
+          "flat_head": 132
+        },
+        {
+          "layer": 8,
+          "head": 7,
+          "flat_head": 135
+        },
+        {
+          "layer": 8,
+          "head": 11,
+          "flat_head": 139
+        },
+        {
+          "layer": 8,
+          "head": 13,
+          "flat_head": 141
+        },
+        {
+          "layer": 8,
+          "head": 14,
+          "flat_head": 142
+        },
+        {
+          "layer": 9,
+          "head": 1,
+          "flat_head": 145
+        },
+        {
+          "layer": 10,
+          "head": 3,
+          "flat_head": 163
+        },
+        {
+          "layer": 10,
+          "head": 7,
+          "flat_head": 167
+        },
+        {
+          "layer": 10,
+          "head": 10,
+          "flat_head": 170
+        },
+        {
+          "layer": 10,
+          "head": 14,
+          "flat_head": 174
+        },
+        {
+          "layer": 10,
+          "head": 15,
+          "flat_head": 175
+        },
+        {
+          "layer": 11,
+          "head": 8,
+          "flat_head": 184
+        },
+        {
+          "layer": 11,
+          "head": 14,
+          "flat_head": 190
+        }
+      ],
+      "random_1": [
+        {
+          "layer": 0,
+          "head": 11,
+          "flat_head": 11
+        },
+        {
+          "layer": 2,
+          "head": 10,
+          "flat_head": 42
+        },
+        {
+          "layer": 4,
+          "head": 13,
+          "flat_head": 77
+        },
+        {
+          "layer": 5,
+          "head": 2,
+          "flat_head": 82
+        },
+        {
+          "layer": 6,
+          "head": 3,
+          "flat_head": 99
+        },
+        {
+          "layer": 7,
+          "head": 0,
+          "flat_head": 112
+        },
+        {
+          "layer": 7,
+          "head": 9,
+          "flat_head": 121
+        },
+        {
+          "layer": 8,
+          "head": 3,
+          "flat_head": 131
+        },
+        {
+          "layer": 8,
+          "head": 6,
+          "flat_head": 134
+        },
+        {
+          "layer": 8,
+          "head": 8,
+          "flat_head": 136
+        },
+        {
+          "layer": 8,
+          "head": 9,
+          "flat_head": 137
+        },
+        {
+          "layer": 8,
+          "head": 15,
+          "flat_head": 143
+        },
+        {
+          "layer": 9,
+          "head": 11,
+          "flat_head": 155
+        },
+        {
+          "layer": 10,
+          "head": 0,
+          "flat_head": 160
+        },
+        {
+          "layer": 10,
+          "head": 1,
+          "flat_head": 161
+        },
+        {
+          "layer": 10,
+          "head": 2,
+          "flat_head": 162
+        },
+        {
+          "layer": 10,
+          "head": 11,
+          "flat_head": 171
+        },
+        {
+          "layer": 10,
+          "head": 13,
+          "flat_head": 173
+        },
+        {
+          "layer": 11,
+          "head": 1,
+          "flat_head": 177
+        },
+        {
+          "layer": 11,
+          "head": 4,
+          "flat_head": 180
+        }
+      ],
+      "random_2": [
+        {
+          "layer": 0,
+          "head": 1,
+          "flat_head": 1
+        },
+        {
+          "layer": 2,
+          "head": 7,
+          "flat_head": 39
+        },
+        {
+          "layer": 4,
+          "head": 14,
+          "flat_head": 78
+        },
+        {
+          "layer": 5,
+          "head": 14,
+          "flat_head": 94
+        },
+        {
+          "layer": 6,
+          "head": 0,
+          "flat_head": 96
+        },
+        {
+          "layer": 7,
+          "head": 0,
+          "flat_head": 112
+        },
+        {
+          "layer": 7,
+          "head": 3,
+          "flat_head": 115
+        },
+        {
+          "layer": 8,
+          "head": 1,
+          "flat_head": 129
+        },
+        {
+          "layer": 8,
+          "head": 3,
+          "flat_head": 131
+        },
+        {
+          "layer": 8,
+          "head": 8,
+          "flat_head": 136
+        },
+        {
+          "layer": 8,
+          "head": 10,
+          "flat_head": 138
+        },
+        {
+          "layer": 8,
+          "head": 12,
+          "flat_head": 140
+        },
+        {
+          "layer": 9,
+          "head": 13,
+          "flat_head": 157
+        },
+        {
+          "layer": 10,
+          "head": 4,
+          "flat_head": 164
+        },
+        {
+          "layer": 10,
+          "head": 5,
+          "flat_head": 165
+        },
+        {
+          "layer": 10,
+          "head": 6,
+          "flat_head": 166
+        },
+        {
+          "layer": 10,
+          "head": 8,
+          "flat_head": 168
+        },
+        {
+          "layer": 10,
+          "head": 13,
+          "flat_head": 173
+        },
+        {
+          "layer": 11,
+          "head": 1,
+          "flat_head": 177
+        },
+        {
+          "layer": 11,
+          "head": 6,
+          "flat_head": 182
+        }
+      ],
+      "random_3": [
+        {
+          "layer": 0,
+          "head": 9,
+          "flat_head": 9
+        },
+        {
+          "layer": 2,
+          "head": 2,
+          "flat_head": 34
+        },
+        {
+          "layer": 4,
+          "head": 15,
+          "flat_head": 79
+        },
+        {
+          "layer": 5,
+          "head": 15,
+          "flat_head": 95
+        },
+        {
+          "layer": 6,
+          "head": 11,
+          "flat_head": 107
+        },
+        {
+          "layer": 7,
+          "head": 5,
+          "flat_head": 117
+        },
+        {
+          "layer": 7,
+          "head": 13,
+          "flat_head": 125
+        },
+        {
+          "layer": 8,
+          "head": 3,
+          "flat_head": 131
+        },
+        {
+          "layer": 8,
+          "head": 5,
+          "flat_head": 133
+        },
+        {
+          "layer": 8,
+          "head": 6,
+          "flat_head": 134
+        },
+        {
+          "layer": 8,
+          "head": 8,
+          "flat_head": 136
+        },
+        {
+          "layer": 8,
+          "head": 15,
+          "flat_head": 143
+        },
+        {
+          "layer": 9,
+          "head": 8,
+          "flat_head": 152
+        },
+        {
+          "layer": 10,
+          "head": 0,
+          "flat_head": 160
+        },
+        {
+          "layer": 10,
+          "head": 1,
+          "flat_head": 161
+        },
+        {
+          "layer": 10,
+          "head": 4,
+          "flat_head": 164
+        },
+        {
+          "layer": 10,
+          "head": 5,
+          "flat_head": 165
+        },
+        {
+          "layer": 10,
+          "head": 12,
+          "flat_head": 172
+        },
+        {
+          "layer": 11,
+          "head": 0,
+          "flat_head": 176
+        },
+        {
+          "layer": 11,
+          "head": 3,
+          "flat_head": 179
+        }
+      ]
+    },
+    "random_control_policy": "3 distinct sets; same count per layer; exclude selected heads; random sets may overlap each other",
+    "seed": 20261110,
+    "ablation_status": "NOT RUN: this CPU notebook only freezes head indices; no behavioral/causal conclusion"
+  },
+  "generation_ids": [
+    40,
+    41,
+    49,
+    87,
+    88,
+    99,
+    130,
+    165,
+    190,
+    194,
+    200,
+    204,
+    247,
+    315,
+    368,
+    464,
+    595,
+    621,
+    649,
+    726
+  ],
+  "e4_rows_sha256": "29a10a893d469fab19ce693ac2e8decbbbaedaf11b71b7e63ff897f69c3b6279",
+  "token_ids_sha256": "705740efc17747707188c079c44ce327f7fa8069771a922e9b0c766833cf1cc7",
+  "manifest_sha256": "387f45769d15316387fae2e912ddb98564ab5896a98a2b2ba67241178b07b605",
+  "source_hashes": {
+    "e1_core.py": "43bd0136cd01cbc3fba8d61e756c76fe5ae0ed437bbc816f2770a981d7a66122",
+    "e3_worker.py": "4629e13522fc103b3fd55dff2048714adafa57b7a8b6c502ce5b5ba8d69e39b0",
+    "original_adapter.py": "415fdfb8f4f46dfe6ebf509a39b01943a3e0ea415e20db6dc1b86583214dd408",
+    "e4_masks.py": "23e6069101916ff35132f4932c8b932ec0984707b2addf1b0d984d0d3ec804c6",
+    "e2_worker.py": "d33d685d6df505349d075cf8f31abc00c332dbd7397d0b4142e5bbe9043f8d2f",
+    "e5_ablation_core.py": "31c63aa12d06f316667cb3a890340621d3904d74d02a195fbb276f2ab0633c2e",
+    "e5_ablation_worker.py": "df54b13f1508ffba4009ad1b845159fba185d441e39ad542247e12acf8ceb487",
+    "e5_ablation_score.py": "8cd638dd82466b92a0a289aa5f0a6b8b283cc38f8bb95c5764c8330233886c88",
+    "e5_ablation_analysis.py": "f17e5bb939209926fd788e94bfdb4fa31e1b0ba98db59bb29abafad5eed59550"
+  },
+  "seed": 20261113,
+  "python_hash_seed": 0,
+  "precision": "fp32",
+  "TF32": false,
+  "attention": "eager",
+  "TF_batch_policy": "same original450 groups of4; MADLAD singleton; score test68 only, unscored neighbors reproduce original padding",
+  "generation_batch_size": 4,
+  "generation": {
+    "max_length": 256,
+    "min_length": 0,
+    "num_beams": 1,
+    "do_sample": false,
+    "use_cache": true,
+    "output_attentions": false,
+    "output_scores": false,
+    "return_dict_in_generate": true
+  },
+  "ablation": "zero selected concatenated head contexts before output projection; no renormalization",
+  "attention_reporting": "all computed probabilities still close to1 per head; save active-head mask, all-head means and normalized surviving-head means separately",
+  "native_equivalence_tolerance": 1e-05,
+  "E4_baseline_tolerance": 1e-05,
+  "module_source_sha256": {
+    "M2M100Attention": "a7e022769df23eabdf1cf7279f775caaaca964938d25205712a4180edc1b346f"
+  },
+  "gpu": "NVIDIA L4",
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.51.3",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "sentencepiece": "0.2.2",
+    "sacrebleu": "2.3.1"
+  }
+}
