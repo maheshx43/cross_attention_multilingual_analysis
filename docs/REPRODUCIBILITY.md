@@ -1,5 +1,10 @@
 # Reproduction details
 
+For the added E1–E8 experiments and the revised-paper table map, see
+[VALIDATION_EXPERIMENTS.md](VALIDATION_EXPERIMENTS.md) and
+[REVISED_MANUSCRIPT_MAP.md](REVISED_MANUSCRIPT_MAP.md). This guide retains
+the original collection and supporting-analysis provenance.
+
 ## Collection and execution order
 
 | Stage | Scripts | Inputs / purpose |
