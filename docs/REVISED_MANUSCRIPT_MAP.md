@@ -22,16 +22,18 @@ The paper PDFs and editorial correspondence are not published in this release.
 | Table 10, tokenization and mask sensitivity | Final E4 deterministic v3 | `E4_held_out_metrics.csv`, `E4_coefficient_stability.csv`, fine component tables |
 | Table 11 and Fig. 4, attention partition | Original fp32 collectors; E3; fine-source distinctions in E4 | Baseline component JSON/CSV; E3 component means; E4 fine masses |
 | Table 12, TF versus free generation | E6 | `E6_main_table.csv`, behavior/support audits, held-dyad predictions |
-| Table 13 and Fig. 2(b), per-head effects | E5A | `E5_per_head_results.csv`, summary, head sets and concentration |
-| Table 14, controlled head ablation | E5B; robustness read back in E6 | `E5_ablation_contrasts.csv`, primary COMET contrast, target/cap sensitivity |
+| Table 13, per-head effects | E5A | `E5_per_head_results.csv`, summary, head sets and concentration |
+| Table 14 and Fig. 2(b), controlled head ablation | E5B; robustness read back in E6 | `E5_ablation_contrasts.csv`, primary COMET contrast, target/cap sensitivity |
 | Tables 15–16 and Fig. 5, tag/text intervention | Original fp32 collectors; E8 statistical extension | Original `intervention_analysis.json`; E8 component, slope, global and simultaneous interaction tables |
 | Table 17, COMET quality test | E2 | `E2_all_metrics_with_CI.csv`, `E2_paired_feature_contrasts.csv`, predictions and COMET score tables |
 | Fig. 1, pipeline schematic | Manuscript illustration | Descriptive diagram; not an experimental output |
 
 Source links and archive names for E1–E8 are in
 [VALIDATION_EXPERIMENTS.md](VALIDATION_EXPERIMENTS.md). Original collector,
-LOLO, historical and variance source maps and Drive folders are in
-[REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+LOLO, historical and variance source maps and regeneration instructions are in
+[REPRODUCIBILITY.md](REPRODUCIBILITY.md). Saved numerical evidence is deposited
+in [results](../results/README.md), with file lineage and hashes in
+[RESULT_PROVENANCE.json](../manifests/RESULT_PROVENANCE.json).
 
 The scripts reproduce their original analysis plots and numerical outputs.
 This source release does not claim the exact manually arranged manuscript
