@@ -18,8 +18,10 @@ are rounded, refitted or recollected for this deposit.
   Tables 5–17 to deposited evidence and hashes.
 - [Frozen splits](../manifests/SPLITS.json) makes the original 450/300 split,
   strict-generalization splits and E6/E7 matched support directly discoverable.
-- [Unresolved artifacts](../manifests/UNRESOLVED_ARTIFACTS.json) records items
-  that have not been verified; this deposit makes no classifier-file claim.
+- [Classifier predictions](../manifests/CLASSIFIER_PREDICTIONS.json) lists six
+  E5B/E6 tables containing language-ID labels, confidence and off-target flags.
+- [Deferred items](../manifests/UNRESOLVED_ARTIFACTS.json) records remaining
+  author decisions and the resolved classifier-file clarification.
 
 Original completion JSONs may also hash files not deposited here, such as
 raw per-head blocks or private generation text. Such hashes are retained as

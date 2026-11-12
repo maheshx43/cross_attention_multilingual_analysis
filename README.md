@@ -76,11 +76,9 @@ deposited in [results/](results/README.md) and [manifests/](manifests/SPLITS.jso
 [Paper-table provenance](manifests/PAPER_TABLE_SOURCES.json) connects revised
 Tables 5–17 to the deposited files and hashes. Larger files use lossless gzip.
 
-The original source/result archives and additional upstream inputs remain on Drive:
-
-- [E1–E8 completed result archives](https://drive.google.com/drive/folders/1oAxnr1y1DwMfzvNGEqFijLGiymKFm8OI)
-- [Original fp32 baseline and crossed intervention outputs](https://drive.google.com/drive/folders/1IzgV6eRs7nqCU_Ffr9Baoc5aMARrhSHf)
-- [Original additive/LOLO outputs](https://drive.google.com/drive/folders/1aLYAwzlTwI0qGwTX1T-UYE_YShLpqYy1)
+Use the [result index](results/README.md), [frozen splits](manifests/SPLITS.json)
+and [table-source map](manifests/PAPER_TABLE_SOURCES.json) to locate the evidence
+inside this repository. Large files can be downloaded and decompressed locally.
 
 The deposited CSV/JSON files are the numerical evidence; notebook displays may
 truncate tables. GitHub verification of these deposited values does not require
@@ -99,6 +97,7 @@ only for MADLAD; E7 finds no reliable gain from the tested flexible models.
 E8 has 39/42 nonzero interaction intervals per model (78/84 overall), adjusted
 jointly across all 84 cells.
 
-The [release scope](docs/RELEASE_SCOPE.md) records the deposited material,
-verification procedure and items deferred by the authors. Classifier prediction
-files have not been located or verified; no such file is claimed here.
+Language-identification classifier predictions are already deposited in the E5B
+and E6 tables. The [classifier index](manifests/CLASSIFIER_PREDICTIONS.json)
+lists all six files and the `lid_label`, `lid_probability` and `off_target` fields.
+The [release scope](docs/RELEASE_SCOPE.md) records verification and deferred items.

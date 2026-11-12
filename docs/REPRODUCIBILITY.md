@@ -3,7 +3,7 @@
 Saved numerical results and split manifests are also deposited in this repository:
 [results](../results/README.md), [split index](../manifests/SPLITS.json),
 [paper-table sources](../manifests/PAPER_TABLE_SOURCES.json) and
-[release scope](RELEASE_SCOPE.md). Original source archives remain linked below.
+[release scope](RELEASE_SCOPE.md).
 
 
 For the added E1–E8 experiments and the revised-paper table map, see
@@ -40,18 +40,23 @@ The fp32 collector source pins model/corpus/normalization revisions and writes
 the frozen split, run locks, seeds and output checkpoints. The original setup
 cells specify package installs; no new environment lock has been invented.
 
-## Saved input and result directories
+## Deposited results and rerun inputs
 
-- [Historical collector backups](https://drive.google.com/drive/folders/1VIuI5ensLAlLiMYO3nhCDxXYYm8cho71)
-- [fp32 baseline, intervention and row-variance outputs](https://drive.google.com/drive/folders/1IzgV6eRs7nqCU_Ffr9Baoc5aMARrhSHf)
-- [LOLO/additive outputs](https://drive.google.com/drive/folders/1aLYAwzlTwI0qGwTX1T-UYE_YShLpqYy1)
-- [Historical head/SVD outputs and caches](https://drive.google.com/drive/folders/1tdYS7-ks_u1IBWDt87yIEXn_fgmmt9Hg)
+- [Original baseline and intervention summaries](../results/original/fp32_tag_intervention)
+- [Original LOLO/additive results](../results/original/lolo)
+- [Original row-variance results and predictions](../results/original/row_level_variance)
+- [E1–E8 validation results](../results/validation)
+- [Split definitions](../manifests/SPLITS.json) and [result-file provenance](../manifests/RESULT_PROVENANCE.json)
+- [Language-ID classifier predictions](../manifests/CLASSIFIER_PREDICTIONS.json)
 
-These external folders are separate from this source release. Their availability
-depends on Drive permissions. Reproduce the directory structure in the source
-under `/content/drive/MyDrive/`, or explicitly edit the path configuration for
-your own runtime. Some external files contain reference/generated text; obtain
-the appropriate dataset access before using them.
+The deposited files can be verified without an external shared-folder account.
+Full inference and tensor analyses still require the appropriate model/corpus
+access and any raw head/tensor inputs not deposited here. Regenerate these with
+the collectors or obtain them from the authors. Original scripts retain their
+`/content/drive/MyDrive/` runtime paths; recreate that layout or edit their path
+configuration in your own runtime. These path defaults are not public data links.
+Decompress numerical `.gz` files before placing them at a script's expected
+plain CSV/JSON path. Summary JSON alone does not replace raw tensor inputs.
 
 ## NLLB missing-row policy
 
@@ -79,7 +84,6 @@ Figures 1–4 are not supplied as new routines here. Original LOLO β/R² plots 
 supporting plots, not the manuscript's Figure 2. The row-variance script produces
 its variance-partition plot. Full manuscript-figure recreation is not promised.
 
-For a manuscript availability statement, describe this repository as **Python
-source exports of the collection and analysis notebooks**, with saved data and
-results available separately subject to access requirements. Do not state that
-this repository contains the notebooks, all raw data, or every figure source.
+The deposited source exports and saved numerical artifacts have separate
+provenance manifests. The current release scope, including any deferred uploads
+and omitted raw inputs, is documented in [RELEASE_SCOPE.md](RELEASE_SCOPE.md).

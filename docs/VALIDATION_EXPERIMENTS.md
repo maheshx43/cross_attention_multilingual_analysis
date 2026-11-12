@@ -3,7 +3,7 @@
 Saved numerical results and split manifests are also deposited in this repository:
 [results](../results/README.md), [split index](../manifests/SPLITS.json),
 [paper-table sources](../manifests/PAPER_TABLE_SOURCES.json) and
-[release scope](RELEASE_SCOPE.md). Original source archives remain linked below.
+[release scope](RELEASE_SCOPE.md).
 
 
 These exports come from the completed Colab notebooks, rather than the earlier
@@ -26,12 +26,15 @@ completion using the later experiment and saved completion manifests.
 | E7 | [Additive/interaction/nonlinear comparison](../scripts/analysis/validation/E7_additive_interaction_nonlinear_cpu.py) | CPU; E6 matched panel and strict held-out folds | `E7_fp32_model_comparison_v1_results.zip` |
 | E8 | [Crossed tag/text interaction](../scripts/analysis/validation/E8_crossed_tag_text_interaction_cpu.py) | CPU; original IT2/NLLB crossed interventions, original split and frozen beta | `E8_crossed_tag_text_cpu_v1_results.zip` |
 
-The nine result archives are in the
-[shared E1–E8 results folder](https://drive.google.com/drive/folders/1oAxnr1y1DwMfzvNGEqFijLGiymKFm8OI).
-Extract the experiment directories under the paths configured in each export.
-Archives contain completion manifests and their file hashes. Raw per-head blocks
-and original upstream collector metrics are separate inputs; a small result ZIP
-does not replace those inputs when rerunning tensor/head analyses.
+The completed numerical artifacts are deposited under
+[results/validation](../results/validation). Each experiment directory retains
+the original result names and completion manifests; larger files add a `.gz`
+suffix. [RESULT_PROVENANCE.json](../manifests/RESULT_PROVENANCE.json) records
+the source archive/member and both deposited and decompressed hashes.
+Archive names above identify run provenance rather than an external download
+requirement. Restore the script's configured directory layout when rerunning.
+Raw per-head blocks and gated corpus/model inputs remain separate requirements
+for full recollection; they are not replaced by numerical summaries.
 
 ## Secondary target-only summary
 
@@ -94,3 +97,11 @@ completion hashes, not truncated notebook displays. For a full rerun, supply
 the upstream Drive files, per-head blocks when needed, pinned model/corpus
 access and compatible hardware. The exports retain the original Colab setup
 and original paths instead of introducing an untested portability layer.
+
+## Language-identification classifier outputs
+
+[CLASSIFIER_PREDICTIONS.json](../manifests/CLASSIFIER_PREDICTIONS.json) identifies
+six deposited E5B/E6 tables with per-output predicted language (`lid_label`),
+confidence (`lid_probability`) and requested-language mismatch (`off_target`).
+These are existing language-ID classifier predictions, not an additional
+classification experiment. E2 predicts continuous quality scores by regression.

@@ -1,0 +1,88 @@
+{
+  "status": "verified existing language-identification classifier predictions",
+  "scope": "Saved classifier outputs embedded in E5B generation_scored and E6 FG_with_LID tables for IT2, NLLB and MADLAD.",
+  "qualification": "These are language-ID predictions. E2 quality prediction is regression, not a separately claimed classification experiment. Empty/undefined labels are preserved.",
+  "confidence_note": "Original classifier scores preserved; the saved fastText scores can exceed 1 by approximately 0.00001. No clipping or recalibration was applied.",
+  "files": [
+    {
+      "path": "results/validation/E5_head_ablation_fp32_v1/quality/it2/generation_scored.csv.gz",
+      "sha256": "c17d574bb22476ba41ee8dca313a066553324a2ac99e858c96bba524e12353c2",
+      "uncompressed_sha256": "848f9c6aabd6651e0ec235ab95762c82d231b4661a9466ba206e2f9fb54092e7",
+      "rows": 4000,
+      "nonempty_language_labels": 4000,
+      "prediction_type": "generated-output language identification",
+      "fields": {
+        "predicted_class": "lid_label",
+        "class_confidence": "lid_probability",
+        "requested_language_mismatch": "off_target"
+      }
+    },
+    {
+      "path": "results/validation/E5_head_ablation_fp32_v1/quality/madlad/generation_scored.csv.gz",
+      "sha256": "096f2e44a9762ac8fd460442a45d58eead0930771050b005e4a6ae03f63b3a42",
+      "uncompressed_sha256": "d586063198be1fa53ae95bad8cf113417d20de927ed053e511b0e96bd63dc268",
+      "rows": 4000,
+      "nonempty_language_labels": 4000,
+      "prediction_type": "generated-output language identification",
+      "fields": {
+        "predicted_class": "lid_label",
+        "class_confidence": "lid_probability",
+        "requested_language_mismatch": "off_target"
+      }
+    },
+    {
+      "path": "results/validation/E5_head_ablation_fp32_v1/quality/nllb/generation_scored.csv.gz",
+      "sha256": "abbb38e4d21affb8d21148c87dc904aa6bf41f5bcbeab1d938102f54dc750da6",
+      "uncompressed_sha256": "d9df1a47fb95e3fd01b6b4fbc371ae3a9ce07e90a5cd5b7e49cbc5202df2a001",
+      "rows": 4000,
+      "nonempty_language_labels": 4000,
+      "prediction_type": "generated-output language identification",
+      "fields": {
+        "predicted_class": "lid_label",
+        "class_confidence": "lid_probability",
+        "requested_language_mismatch": "off_target"
+      }
+    },
+    {
+      "path": "results/validation/E6_fp32_regime_comparison_v1/analysis/it2/FG_with_LID.csv.gz",
+      "sha256": "5c22ea65035384e3d2915f94633364b17635e9d31e29e5848bd122a5e149c388",
+      "uncompressed_sha256": "1ce2ed792237b1f9411ee841da68f8f1cff2daef158405bc664b41247cc6ae36",
+      "rows": 18000,
+      "nonempty_language_labels": 18000,
+      "prediction_type": "generated-output language identification",
+      "fields": {
+        "predicted_class": "lid_label",
+        "class_confidence": "lid_probability",
+        "requested_language_mismatch": "off_target"
+      }
+    },
+    {
+      "path": "results/validation/E6_fp32_regime_comparison_v1/analysis/madlad/FG_with_LID.csv.gz",
+      "sha256": "363c4fc4c28526ac12567d00a6d66da2278a1100cc1c80e12b0a8dacc8665f89",
+      "uncompressed_sha256": "de7ad68c1970a91f9d78263b4330a4a95034a481b03d5fd42eef34d7a7f3cd69",
+      "rows": 18000,
+      "nonempty_language_labels": 18000,
+      "prediction_type": "generated-output language identification",
+      "fields": {
+        "predicted_class": "lid_label",
+        "class_confidence": "lid_probability",
+        "requested_language_mismatch": "off_target"
+      }
+    },
+    {
+      "path": "results/validation/E6_fp32_regime_comparison_v1/analysis/nllb/FG_with_LID.csv.gz",
+      "sha256": "77202d9bf328ba2f9f20007385b87411dcccc3b450db6653977bf915295bdf18",
+      "uncompressed_sha256": "76c954fd3dac6d38f4bc294988f6d04abbb9702d7cd9b768b4eeb2208997e67e",
+      "rows": 18000,
+      "nonempty_language_labels": 18000,
+      "prediction_type": "generated-output language identification",
+      "fields": {
+        "predicted_class": "lid_label",
+        "class_confidence": "lid_probability",
+        "requested_language_mismatch": "off_target"
+      }
+    }
+  ],
+  "data_modified": false,
+  "new_predictions_computed": false
+}
