@@ -1,103 +1,73 @@
 # Cross-attention multilingual analysis
 
-Collection and analysis code accompanying **Language-Dependent Cross-Attention
-in Multilingual Indic Neural Machine Translation**.
+Collection and analysis code accompanying **Language-Dependent Cross-Attention in Multilingual Indic Neural Machine Translation**.
 
-This repository contains **37 Python exports of notebook code cells** (the
-original 28 and nine completed E1–E8 validation notebooks), plus **one executed
-CPU summary of saved predictions** used for the target-only comparison in
-revised Table 8.
+This repository is a **Python-only source and result release**. It contains faithful Python exports of notebook code cells, saved numerical results, frozen split definitions, provenance manifests, and validation utilities. The original notebooks are not included in this release. No license is asserted by this repository; users should contact the authors regarding reuse and redistribution.
 
-The calculations, configurations, assertions, paths and cell order are retained.
-IPython `%pip` and `%%writefile` syntax is represented by equivalent IPython
-magic calls, with explicit staging-path interpolation for script execution;
-worker-file contents are preserved exactly. The original 28
-Python scripts are unchanged. `SOURCE_PROVENANCE.json` records notebook, cell
-and script hashes and each syntax conversion. No scientific routine was
-rewritten and no GPU experiment was rerun to prepare this release.
+The calculations, configurations, assertions, paths, and cell order are retained. IPython `%pip` and `%%writefile` syntax is represented by equivalent Python-compatible export logic with explicit staging-path interpolation; worker-file contents are preserved where applicable. `SOURCE_PROVENANCE.json` records source-notebook names, cell ranges, script hashes, and syntax conversions. No scientific routine was rewritten and no GPU experiment was rerun to prepare this release.
 
-## File structure
+## Repository structure
 
 ```text
 scripts/
   collectors/
     historical/   # original fp16 IT2 pilot, IT2 holdout and NLLB confirmation
-    fp32/         # original tag/text collectors; E3, final E4, E5B and E6
+    fp32/         # original tag/text collectors; E3, E4, E5B and E6
   analysis/
     primary/      # additive/LOLO analyses and original fp32 row variance
-    historical/   # original field, sink, head/SVD and fertility analyses
+    historical/   # field, sink, head/SVD and fertility analyses
     validation/   # E1, E2, E5A, E7, E8 and saved-prediction summary
-docs/
-  REPRODUCIBILITY.md
-  VALIDATION_EXPERIMENTS.md
-  REVISED_MANUSCRIPT_MAP.md
+manifests/        # frozen splits, result hashes, table/figure provenance
 results/          # saved numerical tables, JSON summaries and predictions
-manifests/        # frozen splits, result hashes and paper-table source map
+docs/             # reproduction, validation, release scope and paper map
 SOURCE_PROVENANCE.json
 SHA256SUMS.txt
+CITATION.cff
+RELEASE_NOTES.md
 ```
 
-## Running the code
+## Reproduction scope
 
-Use the original **Google Colab/IPython environment**, with Drive mounted and
-the saved input directories available. These are faithful source exports,
-not a new portable command-line pipeline. The setup cells retain their original
-dependency pins. Collectors and COMET scoring need suitable CUDA hardware and
-the required Hugging Face model/dataset access. Do not commit access tokens.
+Use the original Google Colab/IPython environment for collection and GPU analyses. These are faithful source exports, not a new portable command-line pipeline. The setup cells retain their original dependency pins. Collectors and COMET scoring require suitable CUDA hardware, the pinned Hugging Face model access, FLORES+ access, and the external input directories described in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md). Do not commit access tokens.
 
-After cloning the repository into `/content`, run an export from a Colab cell:
+For CPU-only verification of deposited results and release metadata, run:
+
+```bash
+python3 scripts/validate_release.py
+```
+
+The validator checks required files, split sizes, E6/E7 support, paper-table provenance paths, result-manifest paths, and SHA-256 entries. It does not rerun model inference, COMET scoring, tensor analyses, or statistical fits.
+
+For a source export in Colab, run an experiment only in its documented runtime and inspect its configuration first. For example:
 
 ```python
 %run /content/cross_attention_multilingual_analysis/scripts/analysis/validation/E1_fp32_meaning_dyad_generalization_cpu.py
 ```
 
-Run each experiment in its own appropriate runtime and inspect its configuration
-before execution. E4 v3 is the final deterministic collector; failed earlier E4
-replay notebooks are not released. E5A precedes E5B; E6 precedes E7. E2 and E8
-use their declared historical saved inputs. The exact dependencies, runtime
-requirements, saved archive names and run order are in the
-[validation guide](docs/VALIDATION_EXPERIMENTS.md).
+The experiment order, inputs, runtime requirements, archives, and limitations are in the [validation guide](docs/VALIDATION_EXPERIMENTS.md). E4 v3 is the final deterministic collector; E5A precedes E5B; E6 precedes E7; E2 and E8 use their declared historical saved inputs.
 
-For a fresh run of the original fp32 smoke source, set its saved
-`TOKEN_POSITIONS_VERIFIED=True` to `False`, inspect both printed token/mask
-audits and only then record approval. That saved flag documents the original
-run and does not approve a new run.
+## Data, splits, and supports
 
-## Data and results
+The historical fp16 analyses use 250 / 750 / 750 meanings. The original fp32 collectors use 450 baseline and 300 disjoint intervention meanings. The original strict-generalization split is **315 training / 67 validation / 68 test** within the 450-meaning baseline block.
 
-The original fp16 analyses use 250 / 750 / 750 meanings. The original fp32
-collectors use 450 baseline and 300 disjoint intervention meanings; the new
-strict generalization split is 315 / 67 / 68 within the 450 baseline block.
-E6/E7 use 444 complete matched meanings with retained 309 / 67 / 68 partitions.
-NLLB exclusions are preserved as coded; missing attention is never zero-filled.
+E6/E7 use the **444 common complete meanings** from the matched TF/FG panel and retain the partition as **309 training / 67 validation / 68 test**. The primary E6/E7 attention support is 17,760 rows per system and regime, with 68 test meanings. The support definitions are frozen in [manifests/splits/E6_E7_309_67_68_support.json](manifests/splits/E6_E7_309_67_68_support.json) and [results/validation/E6_fp32_regime_comparison_v1/analysis/E6_primary_support.json](results/validation/E6_fp32_regime_comparison_v1/analysis/E6_primary_support.json).
 
-Saved split definitions, numerical summaries and prediction files are now
-deposited in [results/](results/README.md) and [manifests/](manifests/SPLITS.json).
-[Paper-table provenance](manifests/PAPER_TABLE_SOURCES.json) connects revised
-Tables 5–17 to the deposited files and hashes. Larger files use lossless gzip.
+NLLB historical exclusions are preserved as coded; missing attention is never zero-filled. The NLLB capped-row policy and E6 undefined-attention policy are documented in the reproduction and validation guides.
 
-Use the [result index](results/README.md), [frozen splits](manifests/SPLITS.json)
-and [table-source map](manifests/PAPER_TABLE_SOURCES.json) to locate the evidence
-inside this repository. Large files can be downloaded and decompressed locally.
+## Deposited evidence and provenance
 
-The deposited CSV/JSON files are the numerical evidence; notebook displays may
-truncate tables. GitHub verification of these deposited values does not require
-Drive access. Full recollection still needs original upstream inputs, model and
-corpus access, and the directory structure documented by the scripts. Raw
-attention tensors, model weights and corpus strings are excluded. See the
-[reproduction guide](docs/REPRODUCIBILITY.md) for other inputs.
+Saved CSV/JSON files are the numerical evidence. Use [results/README.md](results/README.md), [manifests/SPLITS.json](manifests/SPLITS.json), [manifests/PAPER_TABLE_SOURCES.json](manifests/PAPER_TABLE_SOURCES.json), [manifests/RESULT_PROVENANCE.json](manifests/RESULT_PROVENANCE.json), and [manifests/REPRODUCIBILITY_INDEX.json](manifests/REPRODUCIBILITY_INDEX.json) to locate the evidence for each manuscript table and figure. Larger files use lossless gzip.
+
+The deposited evidence can be checked without Drive access. Full recollection may still require the pinned models, gated corpus access, raw attention tensors, per-head blocks, external Drive inputs, or the original directory layout. The release explicitly separates directly verifiable saved evidence from analyses that require omitted upstream artifacts.
+
+The exact manually arranged manuscript artwork is not claimed as fully regenerated. Dedicated replacement routines are not supplied for the separate fp32 cross-model point-correlation calculation or the exact nine language-family contrasts; their availability status is recorded in the provenance index and release notes.
 
 ## Revised-paper coverage
 
-The [manuscript map](docs/REVISED_MANUSCRIPT_MAP.md) connects revised sections
-and tables to the original code and E1–E8 outputs. Results include negative and
-model-dependent findings: E2 establishes no reliable incremental COMET
-prediction benefit; corrected E5B selected-versus-random evidence is positive
-only for MADLAD; E7 finds no reliable gain from the tested flexible models.
-E8 has 39/42 nonzero interaction intervals per model (78/84 overall), adjusted
-jointly across all 84 cells.
+The [manuscript map](docs/REVISED_MANUSCRIPT_MAP.md) connects revised tables and figures to source exports and saved numerical evidence. E2 reports no reliable incremental COMET prediction benefit in the two tested systems. Corrected E5B selected-versus-random evidence is positive only for MADLAD-400. E7 finds no reliable gain from the tested flexible model forms. E8 reports the crossed tag/text interaction with simultaneous adjustment over all 84 cells.
 
-Language-identification classifier predictions are already deposited in the E5B
-and E6 tables. The [classifier index](manifests/CLASSIFIER_PREDICTIONS.json)
-lists all six files and the `lid_label`, `lid_probability` and `off_target` fields.
-The [release scope](docs/RELEASE_SCOPE.md) records verification and deferred items.
+Language-identification outputs are deposited in the E5B/E6 tables and indexed in [manifests/CLASSIFIER_PREDICTIONS.json](manifests/CLASSIFIER_PREDICTIONS.json). These are existing language-ID predictions, not a new classification experiment.
+
+## Verification and release identity
+
+Run `python3 scripts/validate_release.py` before citing or archiving a checkout. The exact release commit should be recorded with any submission. See [RELEASE_NOTES.md](RELEASE_NOTES.md) for the Python-only scope, omitted artifacts, validation limits, and known non-rerunnable analyses.

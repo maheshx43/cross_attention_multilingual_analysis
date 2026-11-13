@@ -1,15 +1,30 @@
 # Reproduction details
 
-Saved numerical results and split manifests are also deposited in this repository:
-[results](../results/README.md), [split index](../manifests/SPLITS.json),
-[paper-table sources](../manifests/PAPER_TABLE_SOURCES.json) and
-[release scope](RELEASE_SCOPE.md).
+This repository is a Python-only source and result release. Original notebooks are not included. The Python exports preserve the original source logic and runtime assumptions; they are not a new portable command-line pipeline.
 
+Saved numerical results and split manifests are deposited in [results](../results/README.md), [SPLITS.json](../manifests/SPLITS.json), [PAPER_TABLE_SOURCES.json](../manifests/PAPER_TABLE_SOURCES.json), [RESULT_PROVENANCE.json](../manifests/RESULT_PROVENANCE.json), and [REPRODUCIBILITY_INDEX.json](../manifests/REPRODUCIBILITY_INDEX.json).
 
-For the added E1–E8 experiments and the revised-paper table map, see
-[VALIDATION_EXPERIMENTS.md](VALIDATION_EXPERIMENTS.md) and
-[REVISED_MANUSCRIPT_MAP.md](REVISED_MANUSCRIPT_MAP.md). This guide retains
-the original collection and supporting-analysis provenance.
+## CPU-only verification
+
+From the repository root, run:
+
+```bash
+python3 scripts/validate_release.py
+```
+
+This verifies required files, split sizes, the 444-meaning E6/E7 support, provenance references, and SHA-256 entries. It does not rerun model inference, COMET scoring, tensor analyses, or statistical fits.
+
+## Runtime requirements
+
+- Python 3 with the dependencies retained by the exported setup cells.
+- Google Colab/IPython layout for the original exports.
+- Drive mounted at the paths retained in the source exports, unless paths are adapted locally.
+- CUDA-capable GPU for model collectors and COMET scoring.
+- CPU is sufficient for the released analysis scripts when their saved collector inputs are available.
+- Pinned Hugging Face model/checkpoint and FLORES+ access described in the source locks and validation guide.
+- No access tokens should be committed to the repository.
+
+These exports do not introduce a tested environment lock or portable installation command. Inspect each script's setup cells before execution.
 
 ## Collection and execution order
 
@@ -21,69 +36,38 @@ the original collection and supporting-analysis provenance.
 | fp32 NLLB | `scripts/collectors/fp32/nllb_fp32_tag_intervention_confirm.py` | Same frozen meanings and design |
 | Additive and LOLO | `scripts/analysis/primary/{pilot,holdout,nllb}_lolo_additive_figure_cpu.py` | Four additive models; held-dyad prediction; language-deletion refits |
 | Row variance | `scripts/analysis/primary/03_fp32_row_level_variance_cpu.py` | Both complete fp32 450 × 40 baseline panels |
-| Historical field | `scripts/analysis/historical/*conservative_field_final_v3.py` | Field fit, held-out checks, frozen length balancing and random-edge null |
-| Historical followup | `scripts/analysis/historical/*conservative_field_followup_cpu.py` | Historical potential comparisons, covariates, residual/noise tests, additive identity and NLLB unknown-token audit |
-| Historical sink | `scripts/analysis/historical/*additive_sink_cpu.py` | Additive comparison, exact sink accounting and 100-meaning conditional lexical-share tests |
-| Historical heads | `scripts/analysis/historical/*head_layer_svd_cpu.py`, then `*head_field_followup_cpu.py` | Per-head extraction/caches, SVD/null tests, rank-k held-dyad tests, split halves and localization |
+| Historical field | `scripts/analysis/historical/*conservative_field_final_v3.py` | Field fit, held-out checks, frozen length balancing, and random-edge null |
+| Historical followup | `scripts/analysis/historical/*conservative_field_followup_cpu.py` | Historical potential comparisons, covariates, residual/noise tests, additive identity, and NLLB unknown-token audit |
+| Historical sink | `scripts/analysis/historical/*additive_sink_cpu.py` | Additive comparison, exact sink accounting, and conditional lexical-share tests |
+| Historical heads | `scripts/analysis/historical/*head_layer_svd_cpu.py`, then `*head_field_followup_cpu.py` | Per-head extraction/caches, SVD/null tests, rank-k held-dyad tests, split halves, and localization |
 | Historical fertility | `scripts/analysis/historical/*target_fertility_cpu.py` | Target fertility and meaning-clustered within-language regressions |
+| E1–E8 validation | `scripts/analysis/validation/` and `scripts/collectors/fp32/` | See [VALIDATION_EXPERIMENTS.md](VALIDATION_EXPERIMENTS.md) for archives, run order, and required saved inputs |
 
-Paths are shown in the original source. CPU analysis scripts require saved
-collector metrics; tensor-based tests also need eligible LHTS tensors or their
-validated derived head caches. Summary JSON alone cannot reconstruct per-meaning
-bootstraps or tensor-level tests. Some cross-collection CPU analyses load all
-three historical collections even when the script name selects one output.
+## Supports and denominators
 
-Historical collectors resolve revisions into `manifests/source_lock.json`.
-Supply the original source lock in the collector root before an independent
-reproduction; without it their first-run code resolves remote `main` revisions.
-The fp32 collector source pins model/corpus/normalization revisions and writes
-the frozen split, run locks, seeds and output checkpoints. The original setup
-cells specify package installs; no new environment lock has been invented.
+The original fp32 baseline/intervention design uses 450 baseline and 300 disjoint intervention meanings. The strict-generalization split for E1/E3/E4/E5 is 315 train / 67 validation / 68 test.
 
-## Deposited results and rerun inputs
+E6/E7 use 444 common complete meanings from the TF/FG matched panel and retain 309 train / 67 validation / 68 test. Their primary support is 17,760 attention rows per system and regime, with 68 test meanings. Do not silently exchange these denominators with the original 450-meaning analyses.
 
-- [Original baseline and intervention summaries](../results/original/fp32_tag_intervention)
-- [Original LOLO/additive results](../results/original/lolo)
-- [Original row-variance results and predictions](../results/original/row_level_variance)
-- [E1–E8 validation results](../results/validation)
-- [Split definitions](../manifests/SPLITS.json) and [result-file provenance](../manifests/RESULT_PROVENANCE.json)
-- [Language-ID classifier predictions](../manifests/CLASSIFIER_PREDICTIONS.json)
+The historical NLLB free-generation collector has 57 capped direction–meaning rows. Their attention statistics are excluded while output diagnostics remain. Missing attention is never zero-filled. E6 retains all behavioral outputs and reports undefined attention rows separately.
 
-The deposited files can be verified without an external shared-folder account.
-Full inference and tensor analyses still require the appropriate model/corpus
-access and any raw head/tensor inputs not deposited here. Regenerate these with
-the collectors or obtain them from the authors. Original scripts retain their
-`/content/drive/MyDrive/` runtime paths; recreate that layout or edit their path
-configuration in your own runtime. These path defaults are not public data links.
-Decompress numerical `.gz` files before placing them at a script's expected
-plain CSV/JSON path. Summary JSON alone does not replace raw tensor inputs.
+## Deposited results and omitted inputs
 
-## NLLB missing-row policy
+The deposited CSV/JSON files are directly verifiable numerical evidence. Full inference and tensor analyses still require some combination of:
 
-The historical free-generation collector has 57 capped direction–meaning rows.
-Their attention statistics are excluded while their output diagnostics remain.
-The resulting eligible attention support is 29,943 / 30,000 direction–meaning
-rows and reciprocal complete-case support is 14,944 / 15,000 dyad–meaning pairs.
-Exclusion and matching are enforced in source; do not impute missing values.
-These exclusions do not remove rows from the complete fp32 450-meaning TF panels.
+- pinned model weights and tokenizer access;
+- gated FLORES+ or other corpus inputs;
+- raw attention tensors or validated derived head caches;
+- per-head blocks for tensor-level analyses;
+- external Drive files referenced by original scripts;
+- the original runtime directory layout.
 
-## Manuscript coverage and limitations
+Summary JSON files do not replace raw tensor inputs. Decompress `.gz` files before placing them at a script's expected plain path. The retained hashes verify deposited bytes and do not imply that omitted upstream artifacts are hosted here.
 
-The primary scripts implement the direction-level additive/held-dyad and
-language-deletion analyses and row-level variance analysis. The fp32 collectors
-also compute the baseline field/noise analyses, component decomposition,
-crossed tag/text contrasts and generation manipulation checks. The historical
-scripts implement the supporting conservative-field, length/null, normalized
-lexical, head/SVD and fertility analyses.
+## Manuscript coverage and known gaps
 
-This faithful source release does not add replacement code for manuscript
-artwork or statistics not explicitly computed in these original notebooks.
-In particular, the separate fp32 cross-model point-correlation calculation,
-the exact nine language-family contrasts, and the original layout of manuscript
-Figures 1–4 are not supplied as new routines here. Original LOLO β/R² plots are
-supporting plots, not the manuscript's Figure 2. The row-variance script produces
-its variance-partition plot. Full manuscript-figure recreation is not promised.
+The primary scripts implement direction-level additive/held-dyad and language-deletion analyses and row-level variance analysis. The fp32 collectors compute baseline field/noise analyses, component decomposition, crossed tag/text contrasts, and generation checks. Historical scripts implement conservative-field, length/null, normalized lexical, head/SVD, and fertility analyses.
 
-The deposited source exports and saved numerical artifacts have separate
-provenance manifests. The current release scope, including any deferred uploads
-and omitted raw inputs, is documented in [RELEASE_SCOPE.md](RELEASE_SCOPE.md).
+The release does not add replacement routines for the separate fp32 cross-model point-correlation calculation or the exact nine language-family contrasts. The exact manually arranged manuscript figure artwork is not claimed to be generated by one command. Supporting plots and manuscript artwork should be distinguished in provenance records.
+
+The machine-readable table/figure map is in [REPRODUCIBILITY_INDEX.json](../manifests/REPRODUCIBILITY_INDEX.json). The current scope, omitted inputs, and validation limits are in [RELEASE_SCOPE.md](RELEASE_SCOPE.md) and [RELEASE_NOTES.md](../RELEASE_NOTES.md).
